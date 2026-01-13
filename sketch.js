@@ -44,6 +44,15 @@ function Building1(b1) {
     fill("#000");
     rect(0, posY,
         b1.W, b1.H);
+
+    //* Mini detalhes */
+    let roof = {
+        W: b1.W*0.4,
+        H: 20
+    }
+
+    rect(20, posY-20, roof.W, roof.H);
+    rect(b1.W-roof.W-20, posY-20, roof.W, roof.H);
 }
 
 function Building2(b2) {
