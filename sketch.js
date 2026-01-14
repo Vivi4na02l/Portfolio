@@ -6,8 +6,17 @@ function setup() {
 }
 
 function draw() {
-    background("#1d143a")
+    noStroke();
 
+    let sky = {
+        c1: "#032232",
+        c2: "#042941",
+        c3: "#14334c"
+    }
+
+    background(sky.c1)
+
+    fill("#0a1520")
     let building1 = {
         W: width*0.2,
         H: height*0.5
@@ -35,13 +44,22 @@ function draw() {
     Building2(building2)
     Building3(building3)
     Building4(building4)
+
+    let aurora = {
+        colour: "#02f57396"
+    }
+
+    Sky(sky.c2, -height*0.1)
+    Sky(sky.c3, height*0.05)
+
+    fill("#cebf97")
+    circle(width*0.2, height*0.15, width*0.05)
 }
 
 function Building1(b1) {
     let posY = height-b1.H;
 
     //* Prédio */
-    fill("#000");
     rect(0, posY,
         b1.W, b1.H);
 
@@ -51,16 +69,14 @@ function Building1(b1) {
         H: 20
     }
 
-    rect(20, posY-20, roof.W, roof.H);
-    rect(b1.W-roof.W-20, posY-20, roof.W, roof.H);
+    rect(roof.W*0.2, posY-20, roof.W, roof.H);
+    rect(b1.W-roof.W-(roof.W*0.2), posY-20, roof.W, roof.H);
 }
 
 function Building2(b2) {
     let posY = height-b2.H;
 
     //* Telhado */
-    fill("#000");
-
     beginShape();
 
     vertex(b2.X, posY-height*0.01);
@@ -80,7 +96,6 @@ function Building2(b2) {
 
 
     //* Prédio */
-    fill("#000");
     rect(b2.X, posY,
         b2.W, b2.H);
 }
@@ -89,7 +104,6 @@ function Building3(b3) {
     let posY = height-b3.H;
 
     //* Prédio */
-    fill("#000");
     rect(b3.X, posY,
         b3.W, b3.H);
 }
@@ -98,12 +112,41 @@ function Building4(b4) {
     let posY = height-b4.H;
 
     //* Prédio */
-    fill("#000");
     rect(b4.X, posY,
         b4.W, b4.H);
 
     //* Parte do meio */
-    fill("#000");
     rect(b4.X+b4.W/2-(b4.W/4)/2, posY*0.95,
         b4.W/4, b4.H);
+}
+
+function Sky(colour, diff = 0) {
+    fill(colour)
+    beginShape();
+    vertex(0, height*0.2 - diff);
+
+    bezierVertex(0, height*0.2 - diff,
+                width*0.2, height*0.1 - diff,
+                width*0.25, height*0.2 - diff);
+
+    bezierVertex(width*0.25, height*0.2 - diff,
+                width*0.35, height*0.4 - diff,
+                width*0.5, height*0.15 - diff);
+
+    bezierVertex(width*0.5, height*0.15 - diff,
+                width*0.55, height*0.05 - diff,
+                width*0.62, height*0.15 - diff);
+
+    bezierVertex(width*0.62, height*0.15 - diff,
+                width*0.7, height*0.3 - diff,
+                width*0.8, height*0.2 - diff);
+
+    bezierVertex(width*0.8, height*0.2 - diff,
+                width*0.9, height*0.1 - diff,
+                width, height*0.2 - diff);
+
+    vertex(width, 0);
+    vertex(0, 0);
+
+    endShape();
 }
