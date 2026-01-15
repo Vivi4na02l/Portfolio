@@ -204,7 +204,7 @@ class Snowflake {
         this.x = Math.floor(Math.random() * width);
         this.r = Math.floor(Math.random() * 5);
         this.y = 0;
-        this.speed = (Math.random() * 2) + 1
+        this.speed = (Math.random() * 1.2)+0.5
     }
 
     draw() {
@@ -234,15 +234,15 @@ class Snowflake {
     }
 
     update() {
-        this.y++
+        this.y += this.speed
 
-        let moveX = Math.floor(Math.random() * 2);
+        // let moveX = Math.floor(Math.random() * 2);
 
-        if (moveX == 1) {
-            this.x += 1;
-        } else {
-            this.x -= 1;
-        }
+        // if (moveX == 1) {
+        //     this.x += 1;
+        // } else {
+        //     this.x -= 1;
+        // }
     }
 
     afterBorder() {
