@@ -1,6 +1,6 @@
 let snowflakes = []
 let snow = {
-    c1: "#fff",
+    c1: "#fff7d6",
     c2: "#305573",
     c3: "#183953"
 }
@@ -235,6 +235,14 @@ class Snowflake {
 
     update() {
         this.y++
+
+        let moveX = Math.floor(Math.random() * 2);
+
+        if (moveX == 1) {
+            this.x += 1;
+        } else {
+            this.x -= 1;
+        }
     }
 
     afterBorder() {
