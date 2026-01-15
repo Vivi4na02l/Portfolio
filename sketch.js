@@ -72,14 +72,12 @@ function draw() {
     fill("#cebf97")
     circle(moon.x, moon.y, width*0.05)
 
-    // Snow(snow);
-
+    // console.log(ms+" - "+ms_start);
     if (ms < 500) {
         ms_start = ms
     }
 
-    // console.log(ms+" - "+ms_start);
-    
+    //* adds more snowflakes each half a second */
     if (ms-ms_start > 500) {
         Snowflakes()
         ms_start = ms;
@@ -205,6 +203,10 @@ class Snowflake {
         this.r = Math.floor(Math.random() * 5);
         this.y = 0;
         this.speed = (Math.random() * 1.2)+0.5
+        this.windAffected = {
+            isAffected: Math.floor(Math.random() * 2),
+            direction: Math.floor(Math.random() * 2)
+        }
     }
 
     draw() {
@@ -236,13 +238,13 @@ class Snowflake {
     update() {
         this.y += this.speed
 
-        // let moveX = Math.floor(Math.random() * 2);
-
-        // if (moveX == 1) {
-        //     this.x += 1;
-        // } else {
-        //     this.x -= 1;
-        // }
+        if (this.windAffected.isAffected) {
+            if (this.windAffected.direction) {
+               this.x += 0.1; 
+            } else {
+                this.x -= 0.1;
+            }
+        }
     }
 
     afterBorder() {
