@@ -1,12 +1,32 @@
+let snowflakes = []
+let snow = {
+    c1: "#fff",
+    c2: "#305573",
+    c3: "#183953"
+}
+let moon
+let ms, ms_start;
+
 function setup() {
     let canvasW = window.innerWidth
     let canvasH = window.innerHeight
     let canvas = createCanvas(canvasW, canvasH);
     canvas.parent("divCanvas");
+
+    moon = {
+        x: width*0.2,
+        y: height*0.15
+    }
+
+    for (let i = 0; i < 50; i++) {
+        snowflakes.push(new Snowflake());
+    }
 }
 
 function draw() {
+    clear();
     noStroke();
+    ms = millis()
 
     let sky = {
         c1: "#032232",
@@ -45,15 +65,37 @@ function draw() {
     Building3(building3)
     Building4(building4)
 
-    let aurora = {
-        colour: "#02f57396"
-    }
-
     Sky(sky.c2, -height*0.1)
     Sky(sky.c3, height*0.05)
 
+    //** MOON */
     fill("#cebf97")
-    circle(width*0.2, height*0.15, width*0.05)
+    circle(moon.x, moon.y, width*0.05)
+
+    // Snow(snow);
+
+    if (ms < 500) {
+        ms_start = ms
+    }
+
+    // console.log(ms+" - "+ms_start);
+    
+    if (ms-ms_start > 500) {
+        Snowflakes()
+        ms_start = ms;
+    }
+
+    //* SNOWFLAKES */
+    for (let i = 0; i < snowflakes.length; i++) {
+        let snowflake = snowflakes[i];
+    
+        snowflake.draw();
+        snowflake.update();
+
+        if (snowflake.afterBorder()) {
+            snowflakes.splice(i, 1);
+        }
+    }
 }
 
 function Building1(b1) {
@@ -149,4 +191,55 @@ function Sky(colour, diff = 0) {
     vertex(0, 0);
 
     endShape();
+}
+
+function Snowflakes() {
+    for (let i = 0; i < 50; i++) {
+        snowflakes.push(new Snowflake());
+    }
+}
+
+class Snowflake {
+    constructor() {
+        this.x = Math.floor(Math.random() * width);
+        this.r = Math.floor(Math.random() * 5);
+        this.y = 0;
+        this.speed = (Math.random() * 2) + 1
+    }
+
+    draw() {
+        if (this.x >= moon.x-width*0.1
+            && this.x <= moon.x+width*0.1
+        ) {
+            //* if it's the closest to the moon in X axis */
+
+            if (this.y < moon.y+height*0.3) {
+                fill(snow.c1)                
+            } else {
+                fill(snow.c2)
+            }
+
+        } else if (this.x < moon.x-width*0.1
+            || (this.x > moon.x+width*0.1
+            && this.x < moon.x+width*0.3)
+        ) {
+            //* if it's kinda close to the moon */
+            fill(snow.c2)
+        } else {
+            //* if it's too far from the moon */
+            fill(snow.c3)
+        }
+
+        circle(this.x, this.y, this.r)
+    }
+
+    update() {
+        this.y++
+    }
+
+    afterBorder() {
+        if (this.y >= height) {
+            return true;
+        }
+    }
 }
