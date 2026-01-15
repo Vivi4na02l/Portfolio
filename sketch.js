@@ -44,18 +44,24 @@ function draw() {
 
     let building2 = {
         X: building1.W,
-        W: width*0.4,
+        W: width*0.25,
         H: height*0.3
     }
 
     let building3 = {
         X: building2.X + building2.W,
-        W: width*0.2,
-        H: height*0.4
+        W: width*0.15,
+        H: height*0.5
     }
 
     let building4 = {
         X: building3.X + building3.W,
+        W: width*0.2,
+        H: height*0.4
+    }
+
+    let building5 = {
+        X: building4.X + building4.W,
         W: width*0.2,
         H: height*0.45
     }
@@ -64,6 +70,7 @@ function draw() {
     Building2(building2)
     Building3(building3)
     Building4(building4)
+    Building5(building5)
 
     Sky(sky.c2, -height*0.1)
     Sky(sky.c3, height*0.05)
@@ -109,8 +116,8 @@ function Building1(b1) {
         H: 20
     }
 
-    rect(roof.W*0.2, posY-20, roof.W, roof.H);
-    rect(b1.W-roof.W-(roof.W*0.2), posY-20, roof.W, roof.H);
+    rect(roof.W*0.2, posY-roof.H, roof.W, roof.H);
+    rect(b1.W-roof.W-(roof.W*0.2), posY-roof.H, roof.W, roof.H);
 }
 
 function Building2(b2) {
@@ -146,6 +153,24 @@ function Building3(b3) {
     //* Prédio */
     rect(b3.X, posY,
         b3.W, b3.H);
+
+    //* Mini detalhes */
+    let roofs = [
+        {
+            W: b3.W*0.8,
+            H: 10
+        },
+        {
+            W: b3.W*0.03,
+            H: 30
+        }
+    ];
+
+    //* Detalhes telhado */
+    rect(b3.X+b3.W*0.1, posY-roofs[0].H,
+        roofs[0].W, roofs[0].H)
+    rect(b3.X+b3.W*0.7, posY-roofs[1].H,
+        roofs[1].W, roofs[1].H)
 }
 
 function Building4(b4) {
@@ -154,10 +179,18 @@ function Building4(b4) {
     //* Prédio */
     rect(b4.X, posY,
         b4.W, b4.H);
+}
+
+function Building5(b5) {
+    let posY = height-b5.H;
+
+    //* Prédio */
+    rect(b5.X, posY,
+        b5.W, b5.H);
 
     //* Parte do meio */
-    rect(b4.X+b4.W/2-(b4.W/4)/2, posY*0.95,
-        b4.W/4, b4.H);
+    rect(b5.X+b5.W/2-(b5.W/4)/2, posY*0.95,
+        b5.W/4, b5.H);
 }
 
 function Sky(colour, diff = 0) {
@@ -200,7 +233,7 @@ function Snowflakes() {
 class Snowflake {
     constructor() {
         this.x = Math.floor(Math.random() * width);
-        this.r = Math.floor(Math.random() * 5);
+        this.r = Math.floor(Math.random() * 4);
         this.y = 0;
         this.speed = (Math.random() * 1.2)+0.5
         this.windAffected = {
