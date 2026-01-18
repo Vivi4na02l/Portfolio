@@ -20,7 +20,7 @@ body {
     color: #fff;
 }
 
-p {
+p, h1, h2, h3 {
     margin: 0;
     padding: 0;
 }
@@ -87,27 +87,141 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    background-color: #e7e7e7;
+    /* background-color: #e7e7e7;
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, #46a6de 1px, transparent 1px),
-        linear-gradient(to bottom, #46a6de 1px, transparent 1px);
+        linear-gradient(to bottom, #46a6de 1px, transparent 1px); */
 
     color: #000;
 }
 
-.project {
-    border-radius: 25px;
+#projects > div {
     padding: 50px;
 }
 
-.project .header {
+.project {
+    border-radius: 15px;
+    border: #83d2ff89 solid 10px;
+    backdrop-filter: blur(5px);
+}
+
+.project header {
+    padding: 20px;
+
     display: flex;
     justify-content: space-between;
 
-    background-color: #46a6de92; /* 14334C */
-    backdrop-filter: blur(5px);
-} .project .header div {
+    background-color: #83d2ff89;
+    backdrop-filter: blur(2px);
+} .project header div {
     display: flex;
-    
+}
+
+.project header span {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: solid #4c4c4c 1px;
+    border-radius: 5px;
+
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+} .headerBtn {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-image: linear-gradient(to bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
+    background-image: -o-linear-gradient(bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
+    background-image: -moz-linear-gradient(bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
+    background-image: -webkit-linear-gradient(bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
+    background-image: -ms-linear-gradient(bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
+} .closeBtn {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-image: linear-gradient(to bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
+    background-image: -o-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
+    background-image: -moz-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
+    background-image: -webkit-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
+    background-image: -ms-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
+}
+
+
+
+.project .body, .project footer {
+    padding: 25px;
+}
+
+.project .body {
+    background-color: #e7e7e7;
+} .project .body .description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.projectImg {
+    border: solid #4c4c4c 1px;
+    border-radius: 5px;
+}
+
+.projectTech img {
+    height: 15px;
+} .projectTech figure, .project figcaption {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0;
+} .projectTech figure {
+    align-items: center;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: #1e1e1e;
+    border: #4c4c4c solid 1px;
+    border-radius: 5px;
+} .project figcaption {
+    margin-left: 5px;
+}
+
+.project footer {
+    display: flex;
+    justify-content: end;
+
+    border-top: #c8c8c8 solid 1px;
+
+    background-color: #e0e0e0;
+}
+
+.project footer a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: #1e1e1e;
+    border: #4c4c4c solid 1px;
+    border-radius: 5px;
+
+    background-image: linear-gradient(to bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -o-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -moz-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -webkit-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -ms-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+
+    text-decoration: none;
+} .project footer a:hover {
+    background-image: linear-gradient(to bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -o-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -moz-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -webkit-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -ms-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+}
+
+.cStudy {
+    margin-left: 5px;
+    margin-right: 5px;
 }
