@@ -154,9 +154,10 @@ h1 {
 
 .project .body {
     background-color: #e7e7e7;
+    padding-bottom: 35px;
 } .project .body .description {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .projectImg {
@@ -165,12 +166,15 @@ h1 {
 }
 
 .projectTech img {
-    height: 15px;
-} .projectTech figure, .project figcaption {
+    height: 100%;
+} .project figcaption {
+    margin: 0;
+} .projectTech figure {
     display: inline-flex;
     flex-wrap: wrap;
     margin: 0;
 } .projectTech figure {
+    height: 15px;
     align-items: center;
 
     padding-top: 5px;
@@ -179,11 +183,18 @@ h1 {
     padding-left: 15px;
     padding-right: 15px;
 
+    margin-bottom: 5px;
+
     color: #1e1e1e;
     border: #4c4c4c solid 1px;
     border-radius: 5px;
-} .project figcaption {
-    margin-left: 5px;
+} .project img {
+    margin-right: 5px;
+}
+.projectTech figure:not(:has(img))::before {
+    content: "";
+    height: 15px;
+    display: inline-block;
 }
 
 .project footer {
