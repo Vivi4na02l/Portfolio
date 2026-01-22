@@ -29,13 +29,12 @@ p, h1, h2, h3 {
     color: #fff;
 }
 
+/* BACKGROUND SKETCH */
 #divCanvas {
     position: fixed;
-    /* top: 0;
-    left: 0;
-    z-index: 0; */
 }
 
+/* Making all the normal website content in front of the background sketch */
 main {
     position: absolute;
     top: 0;
@@ -43,6 +42,21 @@ main {
 
     width: 100%;
     z-index: 1;
+}
+
+/** ANIMATIONS */
+.animHigher {
+    transition: all .2s ease-in-out;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.38);
+} .animHigher:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 20px 10px rgba(0, 0, 0, 0.262);
+}
+
+.animBigger {
+    transition: all .2s ease-in-out;
+} .animBigger:hover {
+    transform: scale(1.15);
 }
 
 /** NAVBAR */
@@ -184,6 +198,7 @@ h1 {
     border-radius: 15px;
     border: #83d2ff89 solid 10px;
     backdrop-filter: blur(5px);
+    overflow: hidden;
 }
 
 .project header {
@@ -235,6 +250,7 @@ h1 {
 .project .body {
     background-color: #e7e7e7;
     padding-bottom: 35px;
+    /* border-radius: 10px 10px 0 0; */
 } .project .body .description {
     margin-top: 10px;
     margin-bottom: 20px;
