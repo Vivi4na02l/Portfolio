@@ -123,9 +123,9 @@ function cardList() {
                         </div>
                         
                         <div>
-                            <span class="headerBtn minimizeBtn" onclick="closeCard('${project.title}')">&#8211;</span>
-                            <span class="headerBtn fullscreenBtn">&#9723;</span>
-                            <span class="closeBtn" onclick="closeCard('${project.title}')">✕</span>
+                            <button class="headerBtn minimizeBtn" onclick="closeCard('${project.title}')">&#8211;</button>
+                            <button class="headerBtn fullscreenBtn">&#9723;</button>
+                            <button class="closeBtn" onclick="closeCard('${project.title}')">✕</button>
                         </div>
                     </header>
 
@@ -175,13 +175,15 @@ function cardList() {
     }
 
     if (projectsClosed.length != 0) {
-        projectsHtml += `<div class="iconProjectClosed">`
+        projectsHtml += `<div class="iconProjectsClosed">`
 
         for (const project of projectsClosed) {
             projectsHtml += `
-                <figure onclick="reAddCard('${project.title}')">
-                    <img src="${project.logo}" width="100%">
-                    <figcaption class="pWhite karla">${project.title}</figcaption>
+                <figure onclick="reAddCard('${project.title}')" class="iconProjectClosed">
+                    <span>
+                        <img src="${project.logo}" width="100%">
+                        <figcaption class="pWhite karla">${project.title}</figcaption>
+                    </span>
                 </figure>
             `
         }
