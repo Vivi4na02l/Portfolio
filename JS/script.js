@@ -1,15 +1,3 @@
-// Liberdade Cravada (featured)
-
-// ALVID-19 (award + teamwork)
-
-// React Calculator
-
-// Liberty Breakout
-
-// Breakout Game 
-
-// Asteroids Browser-based 3D reinterpretation of the classic Asteroids game built with Three.js.
-
 let projects = [
     { /** LIBERDADE CRAVADA */ //feito
         logo: "./images/LC_logo.png",
@@ -114,69 +102,129 @@ let projects = [
     },
 ]
 
-let projectsHtml = ''
-for (const project of projects) {
-    projectsHtml += `
-        <div>
-            <article class="project">
-                <!-- header -->
-                <header>
-                    <div>
-                        <img src="${project.logo}"
-                            alt='${project.logo_alt}'
-                            width="5%">
-                        <h3>${project.title}</h3>
-                    </div>
-                    
-                    <div>
-                        <span class="headerBtn minimizeBtn">&#8211;</span>
-                        <span class="headerBtn fullscreenBtn">&#9723;</span>
-                        <span class="closeBtn">✕</span>
-                    </div>
-                </header>
+let projectsClosed = [];
+let projectsList = projects;
+cardList();
 
-                <!-- body -->
-                <div class="body">
-                    <img src="${project.img}"
-                        alt='${project.alt}'
-                        width="100%"
-                        class="projectImg">
+function cardList() {
+    let projectsHtml = ''
 
-                    <p class="description">${project.description}</p>
+    for (const project of projectsList) {
+        projectsHtml += `
+            <div>
+                <article class="project">
+                    <!-- header -->
+                    <header>
+                        <div>
+                            <img src="${project.logo}"
+                                alt='${project.logo_alt}'
+                                width="5%">
+                            <h3>${project.title}</h3>
+                        </div>
+                        
+                        <div>
+                            <span class="headerBtn minimizeBtn" onclick="closeCard('${project.title}')">&#8211;</span>
+                            <span class="headerBtn fullscreenBtn">&#9723;</span>
+                            <span class="closeBtn" onclick="closeCard('${project.title}')">✕</span>
+                        </div>
+                    </header>
 
-                    <span class="projectTech">`
+                    <!-- body -->
+                    <div class="body">
+                        <img src="${project.img}"
+                            alt='${project.alt}'
+                            width="100%"
+                            class="projectImg">
 
-    for (const projectTech of project.tech) {
-        if (!projectTech.img) {
-           projectsHtml += `
-                <figure>
-                    <figcaption>${projectTech.name}</figcaption>
-                </figure>
-            ` 
-        } else {
+                        <p class="description">${project.description}</p>
+
+                        <span class="projectTech">`
+
+        for (const projectTech of project.tech) {
+            if (!projectTech.img) {
             projectsHtml += `
-                <figure>
-                    <img src="${projectTech.img}"
-                        alt="${projectTech.alt} ">
-                    <figcaption>${projectTech.name}</figcaption>
+                    <figure>
+                        <figcaption>${projectTech.name}</figcaption>
+                    </figure>
+                ` 
+            } else {
+                projectsHtml += `
+                    <figure>
+                        <img src="${projectTech.img}"
+                            alt="${projectTech.alt} ">
+                        <figcaption>${projectTech.name}</figcaption>
+                    </figure>
+                `
+            }
+        }
+        
+        projectsHtml += `
+                        </span>
+                    </div>
+
+                    <!-- footer -->
+                    <footer>
+                        <a target="_blank" href="${project.demo}" class="lDemo">Live demo</a>
+                        <a target="_blank" href="" class="cStudy">Case study</a>
+                        <a target="_blank" href="${project.github}" class="github">Github</a>
+                    </footer>
+                </article>
+            </div>
+        `
+
+    }
+
+    if (projectsClosed.length != 0) {
+        projectsHtml += `<div class="iconProjectClosed">`
+
+        for (const project of projectsClosed) {
+            projectsHtml += `
+                <figure onclick="reAddCard('${project.title}')">
+                    <img src="${project.logo}" width="100%">
+                    <figcaption class="pWhite karla">${project.title}</figcaption>
                 </figure>
             `
         }
-    }
-    
-    projectsHtml += `
-                    </span>
-                </div>
 
-                <!-- footer -->
-                <footer>
-                    <a target="_blank" href="${project.demo}" class="lDemo">Live demo</a>
-                    <a target="_blank" href="" class="cStudy">Case study</a>
-                    <a target="_blank" href="${project.github}" class="github">Github</a>
-                </footer>
-            </article>
-        </div>
-    `
+        projectsHtml += `</div>`
+    }
+
+    document.querySelector("#projects").innerHTML = projectsHtml;
 }
 
-document.querySelector("#projects").innerHTML = projectsHtml;
+/**
+ * after clicking on the minimize or close button, the card of that project disappears and a floating icon associated to it appears on the last cell of the grid
+ * @param {*} projectTitle 
+ */
+function closeCard(projectTitle) {
+    // adds an icon of the project to the first grid of the display grid to be able to open the card again
+    let projectIndex = projectsList.findIndex(projectCard => projectCard.title == projectTitle)
+
+    projectsClosed.push({
+        title: projectTitle,
+        logo: projectsList[projectIndex].logo
+    })
+
+
+    // removes project card from the list of cards
+    projectsList = projectsList.filter(projectCard => projectCard.title != projectTitle)
+
+    // refreshes projects card list
+    cardList();
+}
+
+/**
+ * after clicking on the icon of a closed project card, its card reopens and the floating icon disappears
+ * @param {*} projectTitle name of the project clicked
+ */
+function reAddCard(projectTitle) {
+    // removes the project from the array that's meant for closed projects
+    projectsClosed = projectsClosed.filter(projectClosed => projectClosed.title != projectTitle)
+
+    let projectIndex = projects.findIndex(projectCard => projectCard.title == projectTitle)
+    
+    // readds the project entire data to the array that's responsible for the card's area visual
+    projectsList.push(projects[projectIndex])
+
+    cardList();
+}

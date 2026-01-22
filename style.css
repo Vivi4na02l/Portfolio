@@ -25,6 +25,10 @@ p, h1, h2, h3 {
     padding: 0;
 }
 
+.pWhite {
+    color: #fff;
+}
+
 #divCanvas {
     position: fixed;
     /* top: 0;
@@ -86,12 +90,6 @@ h1 {
 #projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-    /* background-color: #e7e7e7;
-    background-size: 40px 40px;
-    background-image:
-        linear-gradient(to right, #46a6de 1px, transparent 1px),
-        linear-gradient(to bottom, #46a6de 1px, transparent 1px); */
 
     color: #000;
 }
@@ -235,4 +233,29 @@ h1 {
 .cStudy {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.iconProjectClosed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+} .iconProjectClosed figure {
+    grid-column: span 1fr;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+/** ABOUT */
+#about {
+    padding: 50px;
+
+    background-color: #e7e7e7;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, #46a6de 1px, transparent 1px),
+        linear-gradient(to bottom, #46a6de 1px, transparent 1px);
 }
