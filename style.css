@@ -73,18 +73,100 @@ nav {
     color: #fff;
 }
 
+h1 {
+    font-size: 5rem;
+}
+
 /** INTRO */
 #intro {
+    padding-left: 20%;
+    padding-right: 20%;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     height: 90vh;
+} 
+
+#intro > div > div {
+    display: flex;
+    flex-direction: row;
+}
+#intro p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-right: 10px;
+} #intro img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    border: 5px solid #d6d6d6;
+
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
 }
 
-h1 {
-    font-size: 4rem;
+#intro > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+} #intro footer {
+    display: flex;
+    align-items: center;
+
+    margin-top: 30px;
 }
+
+#intro a {
+    width: 30px;
+    height: 30px;
+    display: block;
+} .linkedin {
+    background-image: url("https://imgs.search.brave.com/UMjKDE7hsW9bSsrDrF_o5rKYgf15Fz-ebZFxNL0ZMIg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTkv/ODc0LzM0MS9zbWFs/bC9saW5rZWRpbi1h/cHBzLWljb24tZnJl/ZS1wbmcucG5n");
+    background-size: contain;
+    background-repeat: no-repeat;
+} .github {
+    background-image: url("https://imgs.search.brave.com/I4iCgtsDuvQiTkJO4-f2Zab2rBeQRTvhv0h0SspQH00/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/cG5nbG9nby5jb20v/aW1hZ2VzL2FsbF9p/bWcvZ2l0aHViLW1h/cmstd2hpdGUtbG9n/by1iMWMwLnBuZw");
+    background-size: contain;
+    background-repeat: no-repeat;
+} #intro button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    color: #1e1e1e;
+    border: #4c4c4c solid 1px;
+    border-radius: 5px;
+
+    background-image: linear-gradient(to bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -o-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -moz-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -webkit-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -ms-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+
+    text-decoration: none;
+} #intro button:hover {
+    background-image: linear-gradient(to bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -o-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -moz-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -webkit-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -ms-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+
+    cursor: pointer;
+}
+
 
 /** PROJECTS  */
 #projects {
