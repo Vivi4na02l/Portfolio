@@ -15,20 +15,20 @@
         <!-- where canvas is added -->
     </div>
 
-    <main>
-        <nav class="karla">
-            <div id="navbar">
-                <p style="color: #fff;">VH</p>
+    <nav class="karla">
+        <div id="navbar">
+            <p style="color: #fff;">VH</p>
 
-                <div id="links">
-                    <a href="">Projects</a>
-                    <a href="">About</a>
-                    <a href="">Contact</a>
-                    <a href="" style="color: #ebd084;" class="animBigger">Get CV</a>
-                </div>
+            <div id="links">
+                <a href="">Projects</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="" style="color: #ebd084;" class="animBigger">Get CV</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
+    <main>
         <!-- INTRO -->
         <section id="intro">
             <h1 class="bungee-regular">FRONTEND DEVELOPER</h1>
@@ -60,9 +60,31 @@
         <section class="karla" id="about">
             
         </section>
+
+        <!-- SKILLS -->
+        <section class="karla" id="skills">
+            <article>
+                <div id="skillsBody">
+                    <!-- skills added through javascript -->
+                </div>
+
+                <header>
+                    <img src="images/skills_icon.png"
+                        alt="icon for skills">
+
+                    <div>
+                        <button onclick="frontend()">Frontend</button>
+                        <button>Backend</button>
+                        <button>Tools & Workflow</button>
+                        <button>Additional Experience</button>
+                    </div>
+                </header>
+            </article>
+        </section>
     </main>
 
     <script src="JS/sketch.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="JS/projects.js"></script>
+    <script src="JS/skills.js"></script>
 </body>
 </html>
