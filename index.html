@@ -73,13 +73,22 @@
                         alt="icon for skills">
 
                     <div>
-                        <button onclick="frontend()">Frontend</button>
-                        <button>Backend</button>
-                        <button>Tools & Workflow</button>
-                        <button>Additional Experience</button>
+                        <button onclick="tabClicked('frontend', true, this)" class="btnSkills skillsTabActive">Frontend</button>
+                        <button onclick="tabClicked('backend', true, this)" class="btnSkills">Backend</button>
+                        <button onclick="tabClicked('workflow', true, this)" class="btnSkills">Tools & Workflow</button>
+                        <button onclick="tabClicked('extras', true, this)" class="btnSkills">Additional Experience</button>
                     </div>
                 </header>
             </article>
+
+            <aside id="skillsText">
+                <h2 class="bungee-regular">How I Build Interfaces</h2>
+                <p class="karla">
+                    My skill set has grown through a mix of required and self-driven learning. Some technologies were introduced through academic or professional projects, while others I chose deliberately out of curiosity and a desire to explore new ways of building interfaces.
+                    <br><br>
+                    I learn best by applying tools in real contexts like experimenting, iterating, and refining solutions until both the logic and the interaction feel solid. I'm particularly motivated by challenges that involve reasoning about state, data flow, and user interaction rather than purely visual implementation.
+                </p>
+            </aside>
         </section>
     </main>
 
