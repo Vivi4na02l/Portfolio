@@ -217,7 +217,7 @@ h1 {
     display: flex;
 }
 
-.project header button {
+header button {
     padding-top: 2px;
     padding-bottom: 2px;
     border: solid #4c4c4c 1px;
@@ -225,7 +225,7 @@ h1 {
 
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-} .project header button:hover {
+} header button:hover {
     cursor: pointer;
 }
 
@@ -397,11 +397,54 @@ h1 {
 #about {
     padding: 50px;
 
-    background-color: #e7e7e7;
+    /* background-color: #e7e7e7;
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, #46a6de 1px, transparent 1px),
-        linear-gradient(to bottom, #46a6de 1px, transparent 1px);
+        linear-gradient(to bottom, #46a6de 1px, transparent 1px); */
+}
+
+#aboutContent {
+    padding: 20px;
+    border-radius: 15px;
+
+    background-color: #83d2ff89;
+    backdrop-filter: blur(2px);
+} #aboutContent header, #aboutContent header div {
+    display: flex;
+    justify-content: space-between;
+} #aboutContent header span {
+    display: flex;
+    align-items: center;
+} #aboutContent header span img {
+    width: 100%;
+    max-width: 25px;
+    margin-right: 5px;
+}
+
+#aboutBody {
+    margin-top: 10px;
+
+    border-radius: 5px;
+    border: solid 1px #000;
+
+    overflow: hidden;
+} .editFileBar {
+    padding: 10px;
+    border-bottom: solid 1px #000;
+
+    background: #E7E7E7;
+    background: linear-gradient(0deg, rgba(231, 231, 231, 1) 0%, rgba(191, 191, 191, 1) 50%, rgba(231, 231, 231, 1) 100%);
+    color: #000;
+
+    display: flex;
+} #aboutTxt {
+    padding: 10px;
+
+    background-color: #e7e7e7;
+    color: #000;
+    
+    line-height: 1.5;
 }
 
 /** SKILLS */
