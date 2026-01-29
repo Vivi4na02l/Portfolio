@@ -29,6 +29,7 @@ let skills = {
         {name:"PHP", alt:"logo of PHP", aside:true, href:"https://www.php.net/", img:"https://imgs.search.brave.com/_i-dLx6f6BSWR_Vl0pCiP3LSh3Tg5TA21KmQ1p4sU7Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LXBocC1sb2dvLWlj/b24tc3ZnLWRvd25s/b2FkLXBuZy0yMjg0/OTE4LnBuZz9mPXdl/YnAmdz0xMjg"},
         {name:"Java", alt:"logo of Java", aside:true, href:"https://www.java.com/en/", img:"https://imgs.search.brave.com/po-I3Arxkk_lXpY8jR2WfLUgCHQT_-BPM4pKaOcX4Zg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL2Fi/cmFuaGUvcHJvZ3Jh/bW1pbmctbGFuZ3Vh/Z2VzLWxvZ29zL21h/c3Rlci9zcmMvamF2/YS9qYXZhLnN2Zw"},
         {name:"C#", alt:"logo of C#", aside:false, href:"", img:"https://imgs.search.brave.com/uA-Y8z5rWll2g2ntbyId0I7ijTklNne2pubqxrkE8BU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaWNvbi1pY29u/cy5jb20vMjEwNy9Q/TkcvOTYvZmlsZV90/eXBlX2NzaGFycF9p/Y29uXzEzMDY2My5w/bmc"},
+        {name:"Arduino", alt:"logo of Arduino", aside:true, href:"https://www.arduino.cc/", img:"https://imgs.search.brave.com/-MyuPqEqV7g1ve6lfvjU0gKiY7P3RS41K_Cgkuki7Qo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaWNvbi1pY29u/cy5jb20vMjY5OS9Q/TkcvNTEyL2FyZHVp/bm9fbG9nb19pY29u/XzE3MDUxOC5wbmc"},
     ]
 }
 
@@ -80,5 +81,16 @@ function tabClicked(tab = "frontend", clicked = false, element) {
         }
     }
 
-    document.querySelector("#skillsBody").innerHTML = skillsHTML
+    document.querySelector(".skillsBodyScroll").innerHTML = skillsHTML;
+    updateScrollbar();
+}
+
+function updateScrollbar() {
+    const hasScrollbar = document.querySelector(".skillsBodyScroll").scrollHeight > document.querySelector(".skillsBodyScroll").clientHeight;
+    
+    if (hasScrollbar) {
+        document.querySelector(".skillsBodyScroll").style.paddingRight = "10px"
+    } else {
+        document.querySelector(".skillsBodyScroll").style.paddingRight = "0px"
+    }
 }
