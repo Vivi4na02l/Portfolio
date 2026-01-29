@@ -82,15 +82,20 @@ function tabClicked(tab = "frontend", clicked = false, element) {
     }
 
     document.querySelector(".skillsBodyScroll").innerHTML = skillsHTML;
-    updateScrollbar();
 }
 
 function updateScrollbar() {
     const hasScrollbar = document.querySelector(".skillsBodyScroll").scrollHeight > document.querySelector(".skillsBodyScroll").clientHeight;
-    
+
     if (hasScrollbar) {
         document.querySelector(".skillsBodyScroll").style.paddingRight = "10px"
     } else {
         document.querySelector(".skillsBodyScroll").style.paddingRight = "0px"
     }
 }
+
+const resizeObserver = new ResizeObserver(() => {
+    updateScrollbar();
+});
+
+resizeObserver.observe(document.querySelector(".skillsBodyScroll"));
