@@ -29,11 +29,6 @@ p, h1, h2, h3 {
     color: #fff;
 }
 
-/* BACKGROUND SKETCH */
-#divCanvas {
-    position: fixed;
-}
-
 /* Making all the normal website content in front of the background sketch */
 main {
     position: absolute;
@@ -89,8 +84,20 @@ nav {
     color: #ebd084;
 }
 
+/* BACKGROUND SKETCH */
+#divCanvas {
+    position: fixed;
+}
+
+#pageTitle {
+    display: flex;
+    align-items: center;
+} #pageTitle img {
+    margin-left: 1.2rem;
+}
+
 h1 {
-    font-size: 5rem;
+    font-size: 4.2rem;
 } h2 {
     font-size: 3rem;
 }
@@ -116,10 +123,9 @@ h1 {
     font-size: 1.2rem;
     line-height: 1.5;
     text-align: justify;
-    margin-right: 10px;
 } #intro img {
-    width: 75px;
-    height: 75px;
+    width: 100%;
+    max-width: 4.5rem;
     object-fit: cover;
     flex-shrink: 0;
 
@@ -139,12 +145,12 @@ h1 {
     display: flex;
     align-items: center;
 
-    margin-top: 30px;
+    margin-top: 1.8rem;
 }
 
 #intro a {
-    width: 30px;
-    height: 30px;
+    width: 1.8rem;
+    height: 1.8rem;
     display: block;
 } .linkedin {
     background-image: url("https://imgs.search.brave.com/UMjKDE7hsW9bSsrDrF_o5rKYgf15Fz-ebZFxNL0ZMIg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTkv/ODc0LzM0MS9zbWFs/bC9saW5rZWRpbi1h/cHBzLWljb24tZnJl/ZS1wbmcucG5n");
@@ -155,18 +161,18 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
 } #intro button {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
 
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
 
     color: #1e1e1e;
     border: #4c4c4c solid 1px;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 
     background-image: linear-gradient(to bottom, #c2c2c2 40%, #d6d6d6 50%);
     background-image: -o-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
@@ -187,6 +193,11 @@ h1 {
 
 
 /** PROJECTS  */
+#projectsTitle {
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+}
+
 #projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -195,18 +206,18 @@ h1 {
 }
 
 #projects > div {
-    padding: 50px;
+    padding: 0 3rem 6rem 3rem;
 }
 
 .project {
-    border-radius: 15px;
-    border: #83d2ff89 solid 10px;
+    border-radius: 1rem;
+    border: #83d2ff89 solid 0.6rem;
     backdrop-filter: blur(5px);
     overflow: hidden;
 }
 
 .project header {
-    padding: 20px;
+    padding: 1.25rem;
 
     display: flex;
     justify-content: space-between;
@@ -218,10 +229,10 @@ h1 {
 }
 
 header button {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
     border: solid #4c4c4c 1px;
-    border-radius: 5px;
+    border-radius: 0.3rem;
 
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -247,8 +258,8 @@ header button {
 }
 
 .closeBtn {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     background-image: linear-gradient(to bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
     background-image: -o-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
@@ -266,21 +277,21 @@ header button {
 
 
 .project .body, .project footer {
-    padding: 25px;
+    padding: 1.5rem;
 }
 
 .project .body {
     background-color: #e7e7e7;
-    padding-bottom: 35px;
+    padding-bottom: 2.2rem;
     /* border-radius: 10px 10px 0 0; */
 } .project .body .description {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0.65rem;
+    margin-bottom: 1.25rem;
 }
 
 .projectImg {
     border: solid #4c4c4c 1px;
-    border-radius: 5px;
+    border-radius: 0.3rem;
 }
 
 .projectTech img {
@@ -292,26 +303,26 @@ header button {
     flex-wrap: wrap;
     margin: 0;
 } .projectTech figure {
-    height: 15px;
+    height: 1rem;
     align-items: center;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
 
     color: #1e1e1e;
     border: #4c4c4c solid 1px;
-    border-radius: 5px;
+    border-radius: 0.3rem;
 } .project img {
-    margin-right: 5px;
+    margin-right: 0.3rem;
 }
 .projectTech figure:not(:has(img))::before {
     content: "";
-    height: 15px;
+    height: 1rem;
     display: inline-block;
 }
 
@@ -325,15 +336,15 @@ header button {
 }
 
 .project footer a {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     color: #1e1e1e;
     border: #4c4c4c solid 1px;
-    border-radius: 5px;
+    border-radius: 0.3rem;
 
     background-image: linear-gradient(to bottom, #c2c2c2 40%, #d6d6d6 50%);
     background-image: -o-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
@@ -351,8 +362,8 @@ header button {
 }
 
 .cStudy {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
 }
 
 .iconProjectsClosed {
@@ -371,7 +382,7 @@ header button {
 .iconProjectClosed span {
     /* background-color: #83d2ff89; */
     backdrop-filter: blur(2px);
-    border-radius: 15px;
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -384,7 +395,7 @@ header button {
 
 .iconProjectClosed img {
     transition: all .2s ease-in-out;
-    margin-bottom: 10px;
+    margin-bottom: 0.62rem;
 } .iconProjectClosed span:hover {
     cursor: pointer;
     background-color: #83d2ff2f;
@@ -394,19 +405,25 @@ header button {
 }
 
 /** ABOUT */
+#about h2 {
+    margin-bottom: 1rem;
+}
+
 #about {
-    padding: 50px;
+    padding: 3rem;
 
     /* background-color: #e7e7e7;
     background-size: 40px 40px;
     background-image:
         linear-gradient(to right, #46a6de 1px, transparent 1px),
         linear-gradient(to bottom, #46a6de 1px, transparent 1px); */
+} #about header button {
+    cursor: auto;
 }
 
 #aboutContent {
-    padding: 20px;
-    border-radius: 15px;
+    padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+    border-radius: 1rem;
 
     background-color: #83d2ff89;
     backdrop-filter: blur(2px);
@@ -418,19 +435,19 @@ header button {
     align-items: center;
 } #aboutContent header span img {
     width: 100%;
-    max-width: 25px;
-    margin-right: 5px;
+    max-width: 1.5rem;
+    margin-right: 0.3rem;
 }
 
 #aboutBody {
-    margin-top: 10px;
+    margin-top: 0.625rem;
 
-    border-radius: 5px;
+    border-radius: 0.3rem;
     border: solid 1px #000;
 
     overflow: hidden;
 } .editFileBar {
-    padding: 10px;
+    padding: 0.625rem;
     border-bottom: solid 1px #000;
 
     background: #E7E7E7;
@@ -438,26 +455,34 @@ header button {
     color: #000;
 
     display: flex;
-} #aboutTxt {
-    padding: 10px;
+} .editFileBar p {
+    margin-right: 0.625rem;
+    font-size: 0.95rem;
+}
+
+#aboutTxt {
+    padding: 0.625rem;
 
     background-color: #e7e7e7;
     color: #000;
-    
+
     line-height: 1.5;
 }
 
 /** SKILLS */
 #skills {
-    height: 90vh;
-    padding-left: 50px;
+    height: 70vh;
+    min-height: 0;
+    padding-top: 6rem;
+    padding-left: 3rem;
 
     display: grid;
     grid-template-columns: 40% 60%;
 }
 
 #skills article {
-    height: 70%;
+    height: 100%;
+    min-height: 0;
 
     align-self: end;
     display: flex;
@@ -465,17 +490,17 @@ header button {
     /* background-color: #8ec9eb89; */
     background-image: linear-gradient(to bottom, #76aac889 40%, #5e8ea989 60%);
     backdrop-filter: blur(2px);
-    border-radius: 15px;
+    border-radius: 1rem;
 
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 #skillsBody {
     width: 60%;
     background-color: #e7e7e7;
     color: black;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
 
     overflow: hidden;
 }
@@ -507,9 +532,9 @@ header button {
     justify-content: space-between;
 } #skillsBody + header img {
     background-color: #e7e7e7;
-    padding: 10px;
-    border: solid 7px #042941;
-    border-radius: 10px;
+    padding: 0.625rem;
+    border: solid 0.44rem #042941;
+    border-radius: 0.625rem;
     
     max-width: 50px;
     width: 100%;
@@ -524,45 +549,45 @@ header button {
     background: none;
     border-width: 1px;
     border-color: transparent;
-    padding: 15px;
+    padding: 1rem;
     text-align: left;
 } #skillsBody + header button:hover, .skillsTabActive {
     background: linear-gradient(0deg,rgba(118, 170, 200, 0.145) 0%, rgba(83, 118, 140, 0.288) 50%, rgba(118, 170, 200, 0.259) 100%);
     backdrop-filter: blur(2px);
 
     border: solid 1px #0A1520;
-    border-radius: 7px;
+    border-radius: 0.44rem;
 
     cursor: pointer;
 }
 
 #skillsBody figure {
-    padding-left: 10px;
+    padding-left: 1rem;
     display: flex;
     align-items: center;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 1rem;
     border: solid 1px #6f6f6f00;
 } #skillsBody figure:hover {
     background: linear-gradient(0deg,rgb(220, 220, 220) 0%, rgb(210, 210, 210) 50%, rgb(220, 220, 220) 100%);
     border: solid 1px #6f6f6f;
 } #skillsBody img {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
 
-    max-width: 40px;
+    max-width: 2.5rem;
     width: 100%;
-    margin-right: 10px;
+    margin-right: 1rem;
 } #skillsBody aside {
     margin-left: auto;
     align-self: stretch;
     display: flex;
     align-items: center;
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 1rem 1rem 0;
 } #skillsBody aside:hover {
     background-color: #00000014;
     border-left: solid 1px #6f6f6f;
@@ -574,8 +599,8 @@ header button {
     justify-content: center;
     align-items: center;
 } #skillsText p {
-    width: 70%;
-    margin-top: 50px;
-    font-size: 1.2rem;
+    width: 60%;
+    margin-top: 3rem;
+    font-size: 1.25rem;
     line-height: 1.5;
 }

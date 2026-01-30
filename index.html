@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="divCanvas">
-        <!-- where canvas is added -->
+        <!-- where canvas as a background is added -->
     </div>
 
     <nav class="karla">
@@ -31,20 +31,22 @@
     <main>
         <!-- INTRO -->
         <section id="intro">
-            <h1 class="bungee-regular">FRONTEND DEVELOPER</h1>
+            <span id="pageTitle">
+                <h1 class="bungee-regular">FRONTEND DEVELOPER</h1>
+                <img src="images/me.jpeg" alt="author of the website">
+            </span>
 
             <div>
                 <div>
-                    <p>Hello, I'm Viviana Henriques, a front-end web developer focused on logic, interaction, and structured code.
-                    I enjoy translating designs into interactive web experiences, working with state, user input, and front-end architecture rather than purely visual implementation.
-                    I’m particularly motivated by roles where I can focus on behavior, data flow, and how users interact with interfaces.</p>
-
-                    <img src="images/me.jpeg" alt="author of the website">
+                    <p>
+                        Welcome to my workspace: where I build front-end interfaces focused on logic and interaction. <br>
+                        I care about behavior, structure, and how things actually work.
+                    </p>
                 </div>
 
                 <footer>
-                    <a href="" class="linkedin animBigger"></a>
-                    <a href="https://github.com/Vivi4na02l" class="github animBigger"></a>
+                    <!-- <a href="" class="linkedin animBigger"></a>
+                    <a href="https://github.com/Vivi4na02l" class="github animBigger"></a> -->
 
                     <button class="contactMe">Contact Me</button>
                 </footer>
@@ -52,12 +54,14 @@
         </section>
 
         <!-- PROJECTS -->
+        <h2 id="projectsTitle" class="bungee-regular">Projects</h2>
         <section class="karla" id="projects">
             <!-- projects added through javascript -->
         </section>
 
         <!-- ABOUT -->
         <section class="karla" id="about">
+            <h2 class="bungee-regular">About</h2>
             <div id="aboutContent">
                 <header>
                     <span>
@@ -125,6 +129,11 @@
             </aside>
         </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p></p>
+    </footer>
 
     <script src="JS/sketch.js"></script>
     <script src="JS/projects.js"></script>
