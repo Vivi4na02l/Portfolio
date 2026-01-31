@@ -61,7 +61,7 @@ main {
     position: fixed;
     bottom: 0;
 
-    padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+    padding-left: 1.5rem;
 
     background-image: linear-gradient(to bottom, #76aac870 40%, #5e8ea970 60%);
     /* background-color: #5e8ea989; */
@@ -76,19 +76,30 @@ main {
     display: flex;
     justify-content: center;
 } .bottomNavRight {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem 0.5rem 0;
+
     justify-self: end;
+
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #borderHomeBtn {
-    padding: 0.2rem;
-    margin-right: 1rem;
+    padding: 0.1rem;
+    margin: 0.2rem 0 0.2rem 0;
 
     border-radius: 100%;
     
     background: #14334C;
     background: linear-gradient(0deg, rgba(20, 51, 76, 1) 0%, rgba(87, 193, 255, 1) 100%);
 } #bgHomeBtn {
-    padding: 0.6rem;
+    display: block;
+
+    padding: 0.5rem;
 
     border-radius: 100%;
     
@@ -100,7 +111,7 @@ main {
 }
 
 #links {
-    padding-left: 1rem;
+    padding-left: 2rem;
 
     width: 100%;
 
@@ -120,13 +131,21 @@ main {
 
     text-decoration: none;
     color: #fff;
-} #links a:hover {
-    color: #ebd084;
-} .notOnIt {
+    text-shadow: -0.1rem 0 rgb(102, 102, 102), 0 0.1rem black, 0.1rem 0 black, 0 -0.1rem black;
+} #links a > img {
+    width: 100%;
+    max-width: 1.7rem;
+    margin-right: 0.5rem;
+} .notOnIt, .notOpen:hover {
     background: #ffffff;
     background: linear-gradient(340deg, #c4e0f031 58%, #c4e0f0b6 100%);
     box-shadow: inset 0.1rem 0.1rem 0.3rem #ffffff84, /* shadow top left */
                 inset -0.1rem -0.1rem 0.3rem #0832547e; /* shadow bottom right */
+} .notOnIt:hover, .notOpen:active {
+    background: #ffffff;
+    background: linear-gradient(340deg, #c4e0f0ae 58%, #c4e0f0 100%);
+    box-shadow: inset 0.1rem 0.1rem 0.3rem #ffffff, /* shadow top left */
+                inset -0.1rem -0.1rem 0.3rem #083254ab; /* shadow bottom right */
 }
 
 /* BACKGROUND SKETCH */

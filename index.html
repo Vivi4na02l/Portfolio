@@ -17,30 +17,44 @@
 
     <nav class="bottomNav karla">
         <span class="bottomNavLeft">
-            <div id="borderHomeBtn">
-                <div id="bgHomeBtn">
+            <div id="borderHomeBtn" class="animBigger">
+                <a href="#main" id="bgHomeBtn">
                     <img alt="icon created for portfolio (letter V and H sharing a same side)" src="images/VH.png">
-                </div>
+                </a>
             </div>
 
             <div id="links">
-                <a href="" class="notOnIt">Projects</a>
-                <a href="" class="notOnIt">About</a>
-                <a href="" class="notOnIt">Contact</a>
-                <a href="" class="notOnIt" style="color: #ebd084;" class="animBigger">Get CV</a>
+                <a href="#projectsTitle" class="notOnIt">
+                    <img alt="icon of a folder with documents inside" src="images/icon_folder.png">
+                    Projects
+                </a>
+                <a href="#about" class="notOnIt">
+                    <img alt="icon of a unknown user" src="images/icon_about3.png">    
+                    About
+                </a>
+                <a href="#skills" class="notOnIt">
+                    <img alt="icon of tools" src="images/icon_skills.png">    
+                    Skills
+                </a>
+                <a href="#pageFooter" class="notOnIt">
+                    <img alt="icon of a email contact" src="images/icon_contact.png">    
+                    Contact
+                </a>
+                <a href="Viviana Henriques.pdf" target="_blank" rel="noopener" class="notOpen">Get CV</a>
             </div>
         </span>
         <span class="bottomNavRight">
-            11:12
+            <p id="digitalClock"></p>
+            <p id="todaysDate"></p>
         </span>
     </nav>
 
-    <main>
+    <main id="main">
         <!-- INTRO -->
         <section id="intro">
             <span id="pageTitle">
                 <h1 class="bungee-regular">FRONTEND DEVELOPER</h1>
-                <img src="images/me.jpeg" alt="author of the website">
+                <img src="images/me.jpeg" alt="author of the website" class="animBigger">
             </span>
 
             <div>
@@ -99,6 +113,8 @@
                         This allows me to quickly understand unfamiliar codebases, reason about intent, and adapt to different styles, even when they're unconventional or incomplete.
                         <br><br>
                         This way of thinking has also shaped how I explain concepts to others, helping me break down complex ideas and understand different problem-solving approaches.
+                        <br><br>
+                        Languages: Portuguese (native), English (fluent), Spanish (A2)
                     </div>
                 </div>
             </div>
@@ -150,5 +166,6 @@
     <script src="JS/sketch.js"></script>
     <script src="JS/projects.js"></script>
     <script src="JS/skills.js"></script>
+    <script src="JS/page.js"></script>
 </body>
 </html>
