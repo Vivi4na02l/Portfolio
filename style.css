@@ -212,11 +212,7 @@ h1 {
     margin-top: 1.8rem;
 }
 
-#intro a {
-    width: 1.8rem;
-    height: 1.8rem;
-    display: block;
-} .linkedin {
+.linkedin {
     background-image: url("https://imgs.search.brave.com/UMjKDE7hsW9bSsrDrF_o5rKYgf15Fz-ebZFxNL0ZMIg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTkv/ODc0LzM0MS9zbWFs/bC9saW5rZWRpbi1h/cHBzLWljb24tZnJl/ZS1wbmcucG5n");
     background-size: contain;
     background-repeat: no-repeat;
@@ -723,3 +719,13 @@ header button {
 } #message p {
     margin-left: 1rem;
 }
+
+#extraContacts {
+    display: flex;
+} #pageFooter a {
+    margin: 1rem 0.2rem 0 0.2rem;
+
+    width: 1.8rem;
+    height: 1.8rem;
+    display: block;
+} 
