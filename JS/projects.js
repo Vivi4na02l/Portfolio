@@ -111,14 +111,13 @@ function cardList() {
 
     for (const project of projectsList) {
         projectsHtml += `
-            <div>
-                <article class="project animHigher">
+            <div class="animHigher">
+                <article class="project">
                     <!-- header -->
                     <header>
                         <div>
                             <img src="${project.logo}"
-                                alt='${project.logo_alt}'
-                                width="5%">
+                                alt='${project.logo_alt}'>
                             <h3>${project.title}</h3>
                         </div>
                         

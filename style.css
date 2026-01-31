@@ -265,31 +265,33 @@ h1 {
 #projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
 
     color: #000;
 }
 
 #projects > div {
-    padding: 0 3rem 6rem 3rem;
-}
+    margin: 0 3rem 6rem 3rem;
+    padding: 1rem;
 
-.project {
     border-radius: 1rem;
-    border: #83d2ff89 solid 0.6rem;
-    backdrop-filter: blur(5px);
-    overflow: hidden;
-}
-
-.project header {
-    padding: 1.25rem;
-
-    display: flex;
-    justify-content: space-between;
 
     background-color: #83d2ff89;
     backdrop-filter: blur(2px);
+} #projects > div:hover {
+    background-color: rgba(105, 200, 255, 0.6);
+}
+
+.project header {
+    padding: 0.5rem 0 1.25rem 0;
+
+    display: flex;
+    justify-content: space-between;
 } .project header div {
     display: flex;
+} .project header div img {
+    width: 100%;
+    max-width: 1.5rem;
 }
 
 header button {
@@ -347,10 +349,12 @@ header button {
 .project .body {
     background-color: #e7e7e7;
     padding-bottom: 2.2rem;
-    /* border-radius: 10px 10px 0 0; */
+    border-radius: 0.25rem 0.25rem 0 0;
 } .project .body .description {
     margin-top: 0.65rem;
     margin-bottom: 1.25rem;
+} .project footer {
+    border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .projectImg {
@@ -444,7 +448,6 @@ header button {
 }
 
 .iconProjectClosed span {
-    /* background-color: #83d2ff89; */
     backdrop-filter: blur(2px);
     border-radius: 1rem;
 
@@ -489,9 +492,14 @@ header button {
     padding: 1.25rem 0.625rem 0.625rem 0.625rem;
     border-radius: 1rem;
 
+    transition: background-color 0.5s ease;
     background-color: #83d2ff89;
     backdrop-filter: blur(2px);
-} #aboutContent header, #aboutContent header div {
+} #aboutContent:hover {
+    background-color: rgba(105, 200, 255, 0.6);
+}
+
+#aboutContent header, #aboutContent header div {
     display: flex;
     justify-content: space-between;
 } #aboutContent header span {
@@ -551,12 +559,14 @@ header button {
     align-self: end;
     display: flex;
 
-    /* background-color: #8ec9eb89; */
-    background-image: linear-gradient(to bottom, #76aac889 40%, #5e8ea989 60%);
+    transition: background-color 0.5s ease;
+    background-color: #76aac889;
     backdrop-filter: blur(2px);
     border-radius: 1rem;
 
     padding: 0.625rem;
+} #skills article:hover {
+    background-color: #76aac8a2;
 }
 
 #skillsBody {
