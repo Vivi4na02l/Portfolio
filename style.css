@@ -266,7 +266,7 @@ h1 {
     color: #000;
 }
 
-#projects > div {
+#projects > .projectCard {
     margin: 0 3rem 6rem 3rem;
     padding: 1rem;
 
@@ -274,7 +274,7 @@ h1 {
 
     background-color: #83d2ff89;
     backdrop-filter: blur(2px);
-} #projects > div:hover {
+} #projects > .projectCard:hover {
     background-color: rgba(105, 200, 255, 0.6);
 }
 
