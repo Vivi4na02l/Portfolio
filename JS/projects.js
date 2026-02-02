@@ -229,8 +229,9 @@ function reAddCard(projectTitle) {
     cardList();
 }
 
-function projectDetails(project) {
-    sessionStorage.setItem("project", project);
+function projectDetails(title) {
+    let index = projects.findIndex(project => project.title == title)
+    sessionStorage.setItem("project", JSON.stringify(projects[index]));
 
     window.location.href = "../html/projectDetails.html"
 }

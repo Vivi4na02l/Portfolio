@@ -8,8 +8,8 @@ body {
     height: 100%;
 }
 
-ul {
-    margin-top: 1rem;
+li {
+    margin-top: 0.5rem;
 }
 
 main {
@@ -23,7 +23,7 @@ h1 {
     font-size: 2.5rem;
 } h2 {
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-left: 2rem;
 }
 
@@ -47,19 +47,19 @@ article {
     background-color: rgba(105, 200, 255, 0.6);
 }
 
-header {
+#windowButtons {
     display: flex;
     justify-content: space-between;
-} header span {
+} #windowButtons span {
     display: flex;
     align-items: center;
-} header span img {
+} #windowButtons span img {
     width: 100%;
     max-width: 1.5rem;
     margin-right: 0.3rem;
 }
 
-#windowButtons {
+#windowButtons div {
     display: flex;
 }
 
@@ -74,9 +74,10 @@ header {
     border-radius: 0.3rem;
     border: solid 1px #000;
 
-    overflow: hidden;
+    background-color: #e7e7e7;
+    color: #000;
 } .editFileBar {
-    padding: 0.625rem;
+    padding-left: 0.313rem;
     border-bottom: solid 1px #000;
 
     background: #E7E7E7;
@@ -85,8 +86,21 @@ header {
 
     display: flex;
 } .editFileBar p {
-    margin-right: 0.625rem;
+    padding: 0.625rem 0.313rem;
     font-size: 0.95rem;
+} .editFileBar .view {
+    text-decoration: underline;
+    font-weight: bold;
+} .editFileBar .view:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: #0000001f;
+    cursor: pointer;
+}
+
+.scrollContainer {
+    overflow-y: auto;
+    scrollbar-color: #032232 #cdcdcd;
 }
 
 /* TEXTS */
@@ -94,13 +108,7 @@ header {
     flex: 1;
     padding: 0.625rem;
 
-    background-color: #e7e7e7;
-    color: #000;
-
     line-height: 1.5;
-
-    overflow-y: auto;
-    scrollbar-color: #032232 #d0d0d0;
 }
 
 .firstParagraph {
@@ -182,4 +190,37 @@ figure {
 
 .techTable tbody tr:nth-child(even) td {
     background-color: #cdcdcd;
+}
+
+article footer {
+    border-top: #000 1px solid;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #cdcdcd;
+}
+
+article footer a {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    color: #1e1e1e;
+    border: #4c4c4c solid 1px;
+    border-radius: 0.3rem;
+
+    background-image: linear-gradient(to bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -o-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -moz-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -webkit-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+    background-image: -ms-linear-gradient(bottom, #c2c2c2 40%, #d6d6d6 50%);
+
+    text-decoration: none;
+} article footer a:hover {
+    background-image: linear-gradient(to bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -o-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -moz-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -webkit-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+    background-image: -ms-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
 }

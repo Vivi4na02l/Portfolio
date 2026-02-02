@@ -1,6 +1,6 @@
 let projectClicked;
 if (sessionStorage.getItem('project') != null) {
-    projectClicked = sessionStorage.getItem('project');
+    projectClicked = JSON.parse(sessionStorage.getItem('project'));
 } else {
     redirectMainPage();
 }
@@ -78,12 +78,12 @@ let projectsDetails = [
         ],
         challenges: "One of the main challenges was synchronizing different interaction layers: visual animations, user input, data updates, and physical input. Ensuring that these elements responded smoothly without conflicts required careful state handling. Another challenge was keeping the experience intuitive despite the number of underlying systems involved.",
         learned: "This project strengthened my ability to reason about complex interactive systems and reinforced the importance of clear architectural separation in front-end projects. It also deepened my understanding of how users engage with non-traditional interfaces and how visual feedback directly influences behavior."
-    }
+    },
 ]
 
 let html = '';
 for (const project of projectsDetails) {
-    if (project.title == projectClicked) {
+    if (project.title == projectClicked.title) {
         html += `
             <h1 class="bungee-regular">${project.title}</h1>
 
@@ -178,7 +178,7 @@ for (const project of projectsDetails) {
                     </tbody>
                 </table>
 
-                <p>Table featuring different techs and its usability on the project</p>
+                <p>Table featuring different techs and their usability on the project</p>
             </div>
 
 
@@ -197,6 +197,11 @@ for (const project of projectsDetails) {
 }
 
 document.querySelector(".articleText").innerHTML = html;
+document.querySelector("footer").innerHTML = `
+    <a target="_blank" href="${projectClicked.demo}" class="lDemo">Live demo</a>
+    <a target="_blank" href="${projectClicked.github}">Github</a>
+    <a target="_blank" class="cStudy" onclick="projectDetails('${projectClicked.title}')">Thesis</a>
+`;
 
 function redirectMainPage(toClose = true) {
     if (toClose) {
