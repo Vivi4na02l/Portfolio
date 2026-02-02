@@ -58,7 +58,6 @@ main {
 .bottomFixed {
     position: fixed;
     bottom: 0;
-    height: 2.1rem;
 } .bottomNav {
     width: 100%;
 

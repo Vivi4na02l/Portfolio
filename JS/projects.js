@@ -164,13 +164,12 @@ function cardList() {
                     <!-- footer -->
                     <footer>
                         <a target="_blank" href="${project.demo}" class="lDemo">Live demo</a>
-                        <a target="_blank" href="" class="cStudy">Case study</a>
+                        <a target="_blank" class="cStudy" onclick="projectDetails('${project.title}')">Case study</a>
                         <a target="_blank" href="${project.github}" class="github">Github</a>
                     </footer>
                 </article>
             </div>
         `
-
     }
 
     if (projectsClosed.length != 0) {
@@ -228,4 +227,10 @@ function reAddCard(projectTitle) {
     projectsList.push(projects[projectIndex])
 
     cardList();
+}
+
+function projectDetails(projectTitle) {
+    sessionStorage.setItem("project", projectTitle);
+
+    window.location.href = "../html/projectDetails.html"
 }

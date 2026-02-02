@@ -124,19 +124,21 @@ figure {
 } figure img {
     width: 100%;
     max-width: 50rem;
-} figcaption {
-    margin-top: 0.5rem;
+} figcaption, .tableContainer p {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
 
     color: #767676;
 }
 
 .tableContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .techTable {
-    width: 70%;
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
 
@@ -159,6 +161,15 @@ figure {
 /* BODY CELLS */
 .techTable tbody td {
     padding: 0.75rem 1rem;
+}
+
+.techCell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+} .techCell img {
+    width: 100%;
+    max-width: 1.5rem;
 }
 
 /* COLUNAS: par / ímpar */
