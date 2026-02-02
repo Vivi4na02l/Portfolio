@@ -1,0 +1,62 @@
+section {
+    padding: 3rem;
+}
+
+article {
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    background-color: #83d2ff89;
+    backdrop-filter: blur(2px);
+} article:hover {
+    background-color: rgba(105, 200, 255, 0.6);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+} header span {
+    display: flex;
+    align-items: center;
+} header span img {
+    width: 100%;
+    max-width: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+#windowButtons {
+    display: flex;
+} #windowButtons button {
+    cursor: auto;
+}
+
+.articleBody {
+    margin-top: 0.625rem;
+
+    border-radius: 0.3rem;
+    border: solid 1px #000;
+
+    overflow: hidden;
+} .editFileBar {
+    padding: 0.625rem;
+    border-bottom: solid 1px #000;
+
+    background: #E7E7E7;
+    background: linear-gradient(0deg, rgba(231, 231, 231, 1) 0%, rgba(191, 191, 191, 1) 50%, rgba(231, 231, 231, 1) 100%);
+    color: #000;
+
+    display: flex;
+} .editFileBar p {
+    margin-right: 0.625rem;
+    font-size: 0.95rem;
+}
+
+.articleText {
+    padding: 0.625rem;
+
+    background-color: #e7e7e7;
+    color: #000;
+
+    line-height: 1.5;
+}

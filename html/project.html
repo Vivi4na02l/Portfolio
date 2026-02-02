@@ -9,12 +9,85 @@
     <script src="../libraries/p5.sound.min.js"></script>
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projectDetails.css">
 </head>
 <body>
     <div id="divCanvas">
         <!-- where canvas as a background is added -->
     </div>
 
+    <nav class="bottomNav karla">
+        <span class="bottomNavLeft">
+            <div id="borderHomeBtn" class="animBigger">
+                <a href="#main" id="bgHomeBtn">
+                    <img alt="icon created for portfolio (letter V and H sharing a same side)" src="../images/VH.png">
+                </a>
+            </div>
+
+            <div id="links">
+                <a href="#projectsTitle" class="notOnIt">
+                    <img alt="icon of a folder with documents inside" src="../images/icon_folder.png">
+                    Projects
+                </a>
+                <a href="#about" class="notOnIt">
+                    <img alt="icon of a unknown user" src="../images/icon_about3.png">    
+                    About
+                </a>
+                <a href="#skills" class="notOnIt">
+                    <img alt="icon of tools" src="../images/icon_skills.png">    
+                    Skills
+                </a>
+                <a href="#pageFooter" class="notOnIt">
+                    <img alt="icon of a email contact" src="../images/icon_contact.png">    
+                    Contact
+                </a>
+                <a href="Viviana Henriques.pdf" target="_blank" rel="noopener" class="notOpen">Get CV</a>
+            </div>
+        </span>
+        <span class="bottomNavRight">
+            <p id="digitalClock"></p>
+            <p id="todaysDate"></p>
+        </span>
+    </nav>
+
+    <main>
+        <section>
+            <article class="karla">
+                <header>
+                    <span>
+                        <img src="https://imgs.search.brave.com/OM1uI3lfPJzB2ZiF05jIaWboAnmRZVxcF0ukl0b9xo8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly92ZWN0/b3JpZmllZC5jb20v/aW1hZ2VzL3dpbmRv/d3Mtbm90ZXBhZC1p/Y29uLTEucG5n"
+                            alt="icon of windows' notepad">
+                        <p>About "Liberdade Cravada" - notepad</p>
+                    </span>
+
+                    <div id="windowButtons">
+                        <button class="headerBtn minimizeBtn">&#8211;</button>
+                        <button class="headerBtn fullscreenBtn">&#9723;</button>
+                        <button class="closeBtn">✕</button>
+                    </div>
+                </header>
+
+                <div class="articleBody">
+                    <div class="editFileBar">
+                        <p>File</p>
+                        <p>Edit</p>
+                        <p>Format</p>
+                        <p>View</p>
+                        <p>Help</p>
+                    </div>
+
+                    <div class="articleText">
+                        <h1 class="bungee-regular">Liberdade Cravada</h1>
+                        
+                    </div>
+                </div>
+
+
+            </article>
+        </section>
+    </main>
+
     <script src="../JS/sketch.js"></script>
+    <script src="../JS/taskbar.js"></script>
 </body>
 </html>
