@@ -229,8 +229,8 @@ function reAddCard(projectTitle) {
     cardList();
 }
 
-function projectDetails(projectTitle) {
-    sessionStorage.setItem("project", projectTitle);
+function projectDetails(project) {
+    sessionStorage.setItem("project", project);
 
     window.location.href = "../html/projectDetails.html"
 }

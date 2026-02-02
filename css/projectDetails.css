@@ -61,8 +61,6 @@ header {
 
 #windowButtons {
     display: flex;
-} #windowButtons button {
-    cursor: auto;
 }
 
 .articleBody {
@@ -114,6 +112,10 @@ header {
     text-indent: 2rem;
 }
 
+.roleCategory {
+    font-weight: bold;
+}
+
 figure {
     display: flex;
     flex-direction: column;
@@ -123,7 +125,7 @@ figure {
     margin-bottom: 1rem;
 } figure img {
     width: 100%;
-    max-width: 50rem;
+    max-width: 40rem;
 } figcaption, .tableContainer p {
     margin-top: 0.7rem;
     font-size: 0.9rem;
@@ -141,6 +143,7 @@ figure {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+    border: #000 1px solid;
 
     font-size: 0.95rem;
 }
@@ -152,7 +155,7 @@ figure {
     text-align: left;
     font-weight: 600;
 
-    background-color: #b5b5b5; /* mais escuro que o ímpar */
+    background-color: #cdcdcd; /* mais escuro que o ímpar */
     color: #000;
 
     border-bottom: 1px solid #000;
@@ -174,9 +177,9 @@ figure {
 
 /* COLUNAS: par / ímpar */
 .techTable tbody tr:nth-child(odd) td {
-    background-color: #d6d6d6;
+    background-color: #e2e2e2;
 }
 
 .techTable tbody tr:nth-child(even) td {
-    background-color: #b5b5b5;
+    background-color: #cdcdcd;
 }
