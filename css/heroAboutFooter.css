@@ -1,0 +1,177 @@
+#pageTitle {
+    display: flex;
+    align-items: center;
+} #pageTitle img {
+    margin-left: 1.2rem;
+}
+
+/** INTRO */
+#intro {
+    padding-left: 20%;
+    padding-right: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 90vh;
+} 
+
+#intro > div > div {
+    display: flex;
+    flex-direction: row;
+}
+#intro p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+} #intro img {
+    width: 100%;
+    max-width: 4.5rem;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    border: 5px solid #d6d6d6;
+
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
+#intro > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+} #intro footer {
+    display: flex;
+    align-items: center;
+
+    margin-top: 1.8rem;
+}
+
+/** ABOUT */
+#about h2 {
+    margin-bottom: 1rem;
+}
+
+#about {
+    padding: 3rem;
+
+    /* background-color: #e7e7e7;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, #46a6de 1px, transparent 1px),
+        linear-gradient(to bottom, #46a6de 1px, transparent 1px); */
+} #about header button {
+    cursor: auto;
+}
+
+#aboutContent {
+    padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+    border-radius: 1rem;
+
+    transition: background-color 0.5s ease;
+    background-color: #83d2ff89;
+    backdrop-filter: blur(2px);
+} #aboutContent:hover {
+    background-color: rgba(105, 200, 255, 0.6);
+}
+
+#aboutContent header, #aboutContent header div {
+    display: flex;
+    justify-content: space-between;
+} #aboutContent header span {
+    display: flex;
+    align-items: center;
+} #aboutContent header span img {
+    width: 100%;
+    max-width: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+#aboutBody {
+    margin-top: 0.625rem;
+
+    border-radius: 0.3rem;
+    border: solid 1px #000;
+
+    overflow: hidden;
+} .editFileBar {
+    padding: 0.625rem;
+    border-bottom: solid 1px #000;
+
+    background: #E7E7E7;
+    background: linear-gradient(0deg, rgba(231, 231, 231, 1) 0%, rgba(191, 191, 191, 1) 50%, rgba(231, 231, 231, 1) 100%);
+    color: #000;
+
+    display: flex;
+} .editFileBar p {
+    margin-right: 0.625rem;
+    font-size: 0.95rem;
+}
+
+#aboutTxt {
+    padding: 0.625rem;
+
+    background-color: #e7e7e7;
+    color: #000;
+
+    line-height: 1.5;
+}
+
+/** FOOTER */
+#pageFooter {
+    width: 100%;
+    height: 90vh;
+
+    cursor: wait;
+    
+    background: #060F18D4;
+    background: linear-gradient(0deg, rgba(6, 15, 24, 0.85) 0%, rgba(6, 15, 24, 0.85) 70%, rgba(6, 15, 24, 0) 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid rgb(20, 127, 190);
+    border-bottom-color: #46a6de;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#message {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 1rem;
+} #message p {
+    margin-left: 1rem;
+}
+
+#extraContacts {
+    display: flex;
+} #pageFooter a {
+    margin: 1rem 0.2rem 0 0.2rem;
+
+    width: 1.8rem;
+    height: 1.8rem;
+    display: block;
+}
