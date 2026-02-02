@@ -55,11 +55,12 @@ main {
 }
 
 /** NAVBAR */
-.bottomNav {
-    width: 100%;
-    
+.bottomFixed {
     position: fixed;
     bottom: 0;
+    height: 2.1rem;
+} .bottomNav {
+    width: 100%;
 
     padding-left: 1.5rem;
 
@@ -151,12 +152,6 @@ main {
 /* BACKGROUND SKETCH */
 #divCanvas {
     position: fixed;
-}
-
-h1 {
-    font-size: 4.2rem;
-} h2 {
-    font-size: 3rem;
 }
 
 .linkedin {

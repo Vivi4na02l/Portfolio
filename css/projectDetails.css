@@ -1,8 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+main {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+} h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
 section {
-    padding: 3rem;
+    padding: 3rem 3rem 3rem 3rem;
+    overflow: hidden;
 }
 
 article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
     padding: 1rem;
 
     border-radius: 1rem;
@@ -32,6 +66,11 @@ header {
 }
 
 .articleBody {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
     margin-top: 0.625rem;
 
     border-radius: 0.3rem;
@@ -52,11 +91,81 @@ header {
     font-size: 0.95rem;
 }
 
+/* TEXTS */
 .articleText {
+    flex: 1;
     padding: 0.625rem;
 
     background-color: #e7e7e7;
     color: #000;
 
     line-height: 1.5;
+
+    overflow-y: auto;
+    scrollbar-color: #032232 #d0d0d0;
+}
+
+.firstParagraph {
+    border-top: solid 1px #000;
+    padding-top: 1rem;
+}
+
+.paragraph {
+    text-indent: 2rem;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} figure img {
+    width: 100%;
+    max-width: 50rem;
+} figcaption {
+    margin-top: 0.5rem;
+
+    color: #767676;
+}
+
+.tableContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.techTable {
+    width: 70%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    font-size: 0.95rem;
+}
+
+/* HEAD */
+.techTable thead th {
+    padding: 0.75rem 1rem;
+
+    text-align: left;
+    font-weight: 600;
+
+    background-color: #b5b5b5; /* mais escuro que o ímpar */
+    color: #000;
+
+    border-bottom: 1px solid #000;
+}
+
+/* BODY CELLS */
+.techTable tbody td {
+    padding: 0.75rem 1rem;
+}
+
+/* COLUNAS: par / ímpar */
+.techTable tbody tr:nth-child(odd) td {
+    background-color: #d6d6d6;
+}
+
+.techTable tbody tr:nth-child(even) td {
+    background-color: #b5b5b5;
 }

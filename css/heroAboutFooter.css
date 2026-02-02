@@ -1,3 +1,9 @@
+h1 {
+    font-size: 4.2rem;
+} h2 {
+    font-size: 3rem;
+}
+
 #pageTitle {
     display: flex;
     align-items: center;
