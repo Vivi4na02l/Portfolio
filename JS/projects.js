@@ -33,11 +33,11 @@ let projects = [
         demo: "https://vivi4na02l.github.io/Alvid-19/Alvid-19/",
         github: "https://github.com/Vivi4na02l/Alvid-19"
     },
-    { /** REACT CALCULATOR */ //feito
-        logo: "./images/alvid_logo.png",
+    { /** REACT CALCULATOR */ //FAAAAZZZ
+        logo: "./images/calculator_logo.png",
         logo_alt: 'logo of the project "Alvid-19"',
         title: "React Calculator",
-        img: "./images/alvid-19_screenshot.png",
+        img: "./images/calculator_screenshot.png",
         alt: 'screenshot of the react calculator project',
         description: "Simple React calculator focused on clean component structure and predictable state management.",
         tech: [
@@ -45,7 +45,7 @@ let projects = [
             {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
             {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
         ],
-        demo: "",
+        demo: "https://vivi4na02l.github.io/calculator_react/",
         github: "https://github.com/Vivi4na02l/calculator_react"
     },
     { /** LIBERTY BREAKOUT */ //feito
@@ -132,7 +132,6 @@ function cardList() {
                     <div class="body">
                         <img src="${project.img}"
                             alt='${project.alt}'
-                            width="100%"
                             class="projectImg">
 
                         <p class="description">${project.description}</p>
