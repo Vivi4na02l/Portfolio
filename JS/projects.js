@@ -123,7 +123,7 @@ function cardList() {
                         
                         <div>
                             <button class="headerBtn minimizeBtn" onclick="closeCard('${project.title}')">&#8211;</button>
-                            <button class="headerBtn fullscreenBtn">&#9723;</button>
+                            <button class="headerBtn fullscreenBtn" onclick="projectDetails('${project.title}')">&#9723;</button>
                             <button class="closeBtn" onclick="closeCard('${project.title}')">✕</button>
                         </div>
                     </header>
