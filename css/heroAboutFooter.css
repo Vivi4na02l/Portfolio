@@ -1,14 +1,10 @@
-h1 {
-    font-size: 4.2rem;
-} h2 {
-    font-size: 3rem;
-}
-
 #pageTitle {
     display: flex;
     align-items: center;
 } #pageTitle img {
     margin-left: 1.2rem;
+} #pageTitle h1 {
+    text-align: center;
 }
 
 /** INTRO */
@@ -34,7 +30,6 @@ h1 {
     text-align: justify;
 } #intro img {
     width: 100%;
-    max-width: 4.5rem;
     object-fit: cover;
     flex-shrink: 0;
 
@@ -180,4 +175,81 @@ h1 {
     width: 1.8rem;
     height: 1.8rem;
     display: block;
+}
+
+/** smaller mobiles */
+@media screen and (max-width: 499px) {
+    h1 {
+        font-size: 2rem;
+    } h2 {
+        font-size: 1.5rem;
+    }
+
+    #intro img {
+        max-width: 3rem;
+        margin-left: 0.5rem;
+    } #pageTitle img {
+        display: none;
+    }
+}
+
+/** mobile */
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    h1 {
+        font-size: 3rem;
+    } h2 {
+        font-size: 2rem;
+    }
+
+    #intro img {
+        max-width: 3.5rem;
+        margin-left: 1rem;
+    } #pageTitle img {
+        display: none;
+    }
+}
+
+/** tablet vertical portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 3.5rem;
+    } h2 {
+        font-size: 2.5rem;
+    }
+
+    #intro img {
+        max-width: 4.5rem;
+    } #intro footer img {
+        display: none;
+    }
+}
+
+/** desktop screen */
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+    h1 {
+        font-size: 3.5rem;
+    } h2 {
+        font-size: 2.5rem;
+    }
+
+    #intro img {
+        max-width: 4.5rem;
+    } #intro footer img {
+        display: none;
+    }
+}
+
+/** bigger desktop screen */
+@media screen and (min-width: 1370px) {
+    h1 {
+        font-size: 4.2rem;
+    } h2 {
+        font-size: 3rem;
+    }
+
+    #intro img {
+        max-width: 4.5rem;
+    } #intro footer img {
+        display: none;
+    }
 }

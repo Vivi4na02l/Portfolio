@@ -28,7 +28,6 @@ h1 {
 }
 
 section {
-    padding: 3rem 3rem 3rem 3rem;
     overflow: hidden;
 }
 
@@ -223,4 +222,43 @@ article footer a {
     background-image: -moz-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
     background-image: -webkit-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
     background-image: -ms-linear-gradient(bottom, #87c3e6 40%, #c4e0f0 50%);
+}
+
+/** extra small mobile */
+@media screen and (max-width: 449px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+/** mobile */
+@media screen and (min-width: 450px) and (max-width: 767px) {
+    html {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+/** tablet vertical portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    section {
+        padding: 3rem 3rem 3rem 3rem;
+    }
+}
+
+/** desktop screen */
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+    section {
+        padding: 3rem 3rem 3rem 3rem;
+    }
+}
+
+/** bigger desktop screen */
+@media screen and (min-width: 1370px) {
+    section {
+        padding: 3rem 3rem 3rem 3rem;
+    }
 }

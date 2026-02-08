@@ -62,14 +62,9 @@ main {
 } .bottomNav {
     width: 100%;
 
-    padding-left: 1.5rem;
-
     background-image: linear-gradient(to bottom, #76aac870 40%, #5e8ea970 60%);
     /* background-color: #5e8ea989; */
     backdrop-filter: blur(5px);
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
     box-sizing: border-box;
 
     z-index: 2;
@@ -112,14 +107,11 @@ main {
 }
 
 #links {
-    padding-left: 2rem;
-
     width: 100%;
 
     display: flex;
     align-items: center;
 } #links a {
-    padding: 0 1rem 0 1rem;
     margin-right: 1rem;
 
     height: 100%;
@@ -127,7 +119,6 @@ main {
     display: flex;
     align-items: center;
 
-    /* border: solid 1px #000; */
     border-radius: 0.5rem;
 
     text-decoration: none;
@@ -136,7 +127,6 @@ main {
 } #links a > img {
     width: 100%;
     max-width: 1.7rem;
-    margin-right: 0.5rem;
 } .notOnIt, .notOpen:hover {
     background: #ffffff;
     background: linear-gradient(340deg, #c4e0f031 58%, #c4e0f0b6 100%);
@@ -195,8 +185,6 @@ main {
 
 /** Button minimize, maximize and close */
 header button {
-    padding-top: 0.12rem;
-    padding-bottom: 0.12rem;
     border: solid #4c4c4c 1px;
     border-radius: 0.3rem;
 
@@ -207,9 +195,6 @@ header button {
 }
 
 .headerBtn {
-    padding-left: 10px;
-    padding-right: 10px;
-
     background-image: linear-gradient(to bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
     background-image: -o-linear-gradient(bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
     background-image: -moz-linear-gradient(bottom, #8dc6e7c7 40%, #c4e0f0c7 50%);
@@ -224,9 +209,6 @@ header button {
 }
 
 .closeBtn {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
     background-image: linear-gradient(to bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
     background-image: -o-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
     background-image: -moz-linear-gradient(bottom, #d45d5dc7 40%, #f1a2a2c7 50%);
@@ -239,3 +221,163 @@ header button {
     background-image: -webkit-linear-gradient(bottom, #ed3030c7 40%, #ff7070c7 50%);
     background-image: -ms-linear-gradient(bottom, #ed3030c7 40%, #ff7070c7 50%);
 } 
+
+/** smaller mobile */
+@media screen and (min-width: 410px) and (max-width: 599px) {
+    header button {
+        padding-top: 0.12rem;
+        padding-bottom: 0.12rem;
+    } .headerBtn {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    } .closeBtn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/** smaller mobile */
+@media screen and (max-width: 599px) {
+    body {
+        font-size: 12px;
+    }
+
+    .bottomNav {
+        padding-left: 1rem;
+    } #links {
+        padding-left: 1rem;
+    } #links a {
+        padding: 0 0.5rem 0 0.5rem;
+    } #links span {
+        display: none;
+    }
+
+    .bottomNavRight {
+        display: none;
+    }
+}
+
+/** mobile */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .bottomNav {
+        padding-left: 1rem;
+    } #links {
+        padding-left: 1rem;
+    }
+
+    .bottomNavRight {
+        display: none;
+    } #links a {
+        padding: 0 1rem 0 1rem;
+    } #links a > img {
+        margin-right: 0.5rem;
+    }
+
+    header button {
+        padding-top: 0.12rem;
+        padding-bottom: 0.12rem;
+    } .headerBtn {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    } .closeBtn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/** tablet vertical portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    html {
+        font-size: 14px;
+    }
+
+    .bottomNav {
+        padding-left: 1.5rem;
+        
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    } #links {
+        padding-left: 2rem;
+    } #links a {
+        padding: 0 1rem 0 1rem;
+    } #links a > img {
+        margin-right: 0.5rem;
+    }
+
+    header button {
+        padding-top: 0.12rem;
+        padding-bottom: 0.12rem;
+    } .headerBtn {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    } .closeBtn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/** desktop screen */
+@media screen and (min-width: 1024px) and (max-width: 1369px) {
+    html {
+        font-size: 15px;
+    }
+
+    .bottomNav {
+        padding-left: 1.5rem;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    } #links {
+        padding-left: 2rem;
+    } #links a {
+        padding: 0 1rem 0 1rem;
+    } #links a > img {
+        margin-right: 0.5rem;
+    }
+
+    header button {
+        padding-top: 0.12rem;
+        padding-bottom: 0.12rem;
+    } .headerBtn {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    } .closeBtn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/** bigger desktop screen */
+@media screen and (min-width: 1370px) {
+    html {
+        font-size: 16px;
+    }
+
+    .bottomNav {
+        padding-left: 1.5rem;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    } #links {
+        padding-left: 2rem;
+    } #links a {
+        padding: 0 1rem 0 1rem;
+    } #links a > img {
+        margin-right: 0.5rem;
+    }
+
+    header button {
+        padding-top: 0.12rem;
+        padding-bottom: 0.12rem;
+    } .headerBtn {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    } .closeBtn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
