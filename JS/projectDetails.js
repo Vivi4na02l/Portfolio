@@ -87,7 +87,7 @@ for (const project of projectsDetails) {
         html += `
             <h1 class="bungee-regular">${project.title}</h1>
 
-            <h2 class="karla">Context</h2>
+            <h2 class="karla" id="context">Context</h2>
             <p class="firstParagraph paragraph">
                 ${project.context}
             </p>
@@ -99,13 +99,13 @@ for (const project of projectsDetails) {
             </figure>
 
 
-            <h2 class="karla">The Problem</h2>
+            <h2 class="karla" id="problem">The Problem</h2>
             <p class="firstParagraph paragraph">
                 ${project.problem}
             </p>
 
 
-            <h2 class="karla">What I built</h2>
+            <h2 class="karla" id="built">What I built</h2>
             <p class="firstParagraph paragraph">
                 ${project.roles.sentence}
             </p>
@@ -139,7 +139,7 @@ for (const project of projectsDetails) {
             </ul>
 
 
-            <h2 class="karla">Tech Stack</h2>
+            <h2 class="karla" id="tech">Tech Stack</h2>
             <div class="tableContainer">
                 <table class="techTable">
                     <thead>
@@ -182,13 +182,13 @@ for (const project of projectsDetails) {
             </div>
 
 
-            <h2 class="karla">Challenges</h2>
+            <h2 class="karla" id="challenges">Challenges</h2>
             <p class="firstParagraph paragraph">
                 ${project.challenges}
             </p>
 
             
-            <h2 class="karla">What I learned</h2>
+            <h2 class="karla" id="learned">What I learned</h2>
             <p class="firstParagraph paragraph">
                 ${project.learned}
             </p>
