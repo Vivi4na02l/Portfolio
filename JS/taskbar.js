@@ -24,3 +24,13 @@ function checkDigits(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
+function contactMe() {
+    window.location.href = "mailto:vivi4na20l@gmail.com";
+}
+
+// for (const contactMe of document.querySelectorAll(".contactMe")) {
+//     contactMe.addEventListener("click", () => {
+//         window.location.href = "mailto:vivi4na20l@gmail.com";
+//     })
+// }
