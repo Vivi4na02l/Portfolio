@@ -17,21 +17,20 @@ let projects = [
         demo: "https://vivi4na02l.github.io/Liberdade-Cravada/",
         github: "https://github.com/Vivi4na02l/Liberdade-Cravada"
     },
-    { /** ALVID-19 */ //feito
-        logo: "./images/alvid_logo.png",
-        logo_alt: 'logo of the project "Alvid-19"',
-        title: "Alvid-19",
-        img: "./images/alvid-19_screenshot.png",
-        alt: 'first section of the main page of the project "Alvid-19"',
-        description: "Award-winning gamified educational web platform featuring user authentication, roles and interactive games.",
+    { /** HEALTH DASHBOARD */ //feito
+        logo: "./images/health_logo.png",
+        logo_alt: 'logo of the project "Health dashboard"',
+        title: "Health Dashboard",
+        img: "../images/health_screenshot.png",
+        alt: 'screenshot of the main menu of Health Dashboard',
+        description: "A Vue.js dashboard application for managing groceries, recipes, nutrition intake and weekly activities, currently under active development.",
         tech: [
+            {name: "Vue", img:"https://imgs.search.brave.com/lzEzLu8gYPE4210HEHtEAkn-20v0piUm6QAod9OycF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LXZ1ZS1sb2dvLWlj/b24tZG93bmxvYWQt/aW4tc3ZnLXBuZy1n/aWYtZmlsZS1mb3Jt/YXRzLS1jb21wYW55/LWJyYW5kLXdvcmxk/LWxvZ29zLXZvbC01/LXBhY2staWNvbnMt/MjgyNDk3LnBuZz9m/PXdlYnAmdz0yNTY", alt: "logo of vue"},
             {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "HTML5", img:"https://imgs.search.brave.com/-A7DMn2sD4NJtodxwkO-SQM6qd5-pMzItJulgw-SvIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9odG1sLTEuc3Zn", alt: "logo of HTML"},
             {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-            {name: "MVC", img:false, alt:false},
         ],
-        demo: "https://vivi4na02l.github.io/Alvid-19/Alvid-19/",
-        github: "https://github.com/Vivi4na02l/Alvid-19"
+        demo: "https://vivi4na02l.github.io/health-dashboard/",
+        github: "https://github.com/Vivi4na02l/health-dashboard"
     },
     { /** REACT CALCULATOR */ //FAAAAZZZ
         logo: "./images/calculator_logo.png",
@@ -48,22 +47,21 @@ let projects = [
         demo: "https://vivi4na02l.github.io/calculator_react/",
         github: "https://github.com/Vivi4na02l/calculator_react"
     },
-    { /** LIBERTY BREAKOUT */ //feito
-        logo: "./images/LC_logo.png",
-        logo_alt: 'logo of the project "Liberty Breakout"',
-        title: "Liberty Breakout",
-        img: "../images/LB_screenshot.png",
-        alt: 'screenshot of the main menu of Liberty Breakout',
-        description: "Gamified interactive project exploring the April 25, 1974 revolution through mini-games and alternative input methods.",
+    { /** ALVID-19 */ //feito
+        logo: "./images/alvid_logo.png",
+        logo_alt: 'logo of the project "Alvid-19"',
+        title: "Alvid-19",
+        img: "./images/alvid-19_screenshot.png",
+        alt: 'first section of the main page of the project "Alvid-19"',
+        description: "Award-winning gamified educational web platform featuring user authentication, roles and interactive games.",
         tech: [
             {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "p5.js", img:"./images/p5.png", alt:"logo of p5.js"},
-            {name: "Arduino", img:"https://imgs.search.brave.com/FW1BpdqbKcF55DbjQeH7VCg6AeaCNKGgs3tebxQ-cXI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWFyZHVpbm8taWNv/bi1zdmctZG93bmxv/YWQtcG5nLTIyNjA3/Mi5wbmc_Zj13ZWJw/Jnc9MTI4", alt: "logo of arduino"},
             {name: "HTML5", img:"https://imgs.search.brave.com/-A7DMn2sD4NJtodxwkO-SQM6qd5-pMzItJulgw-SvIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9odG1sLTEuc3Zn", alt: "logo of HTML"},
             {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
+            {name: "MVC", img:false, alt:false},
         ],
-        demo: "https://vivi4na02l.github.io/Liberty-Breakout/P5_to_Arduino/index.html",
-        github: "https://github.com/Vivi4na02l/Liberty-Breakout"
+        demo: "https://vivi4na02l.github.io/Alvid-19/Alvid-19/",
+        github: "https://github.com/Vivi4na02l/Alvid-19"
     },
     { /** VAPORWAVE BREAKOUT */ //feito
         logo: "./images/LC_logo.png",
