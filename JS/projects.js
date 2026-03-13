@@ -21,7 +21,7 @@ let projects = [
         logo: "./images/health_logo.png",
         logo_alt: 'logo of the project "Health dashboard"',
         title: "Health Dashboard",
-        img: "../images/health_screenshot.png",
+        img: "./images/health_screenshot.png",
         alt: 'screenshot of the main menu of Health Dashboard',
         description: "A Vue.js dashboard application for managing groceries, recipes, nutrition intake and weekly activities, currently under active development.",
         tech: [
@@ -67,7 +67,7 @@ let projects = [
         logo: "./images/LC_logo.png",
         logo_alt: 'logo of the project "Vaporwave Breakout"',
         title: "Vaporwave Breakout",
-        img: "../images/VB_screenshot.png",
+        img: "./images/VB_screenshot.png",
         alt: 'screenshot of the main menu of Vaporwave Breakout',
         description: "Reinterpretation of the classic Breakout game focused on experimenting with alternative interaction methods.",
         tech: [
@@ -85,7 +85,7 @@ let projects = [
         logo: "./images/A_logo.png",
         logo_alt: 'logo of the project "Asteroids"',
         title: "Asteroids",
-        img: "../images/A_screenshot.png",
+        img: "./images/A_screenshot.png",
         alt: 'screenshot of the part of the gameplay of Asteroids',
         description: "A 2D browser-based reimagining of the classic Asteroids game with solid boundaries, physics-based collisions, and mouse-aimed shooting mechanics.",
         tech: [
@@ -230,5 +230,5 @@ function projectDetails(title) {
     let index = projects.findIndex(project => project.title == title)
     sessionStorage.setItem("project", JSON.stringify(projects[index]));
 
-    window.location.href = "../html/projectDetails.html"
+    window.location.href = "./html/projectDetails.html"
 }
