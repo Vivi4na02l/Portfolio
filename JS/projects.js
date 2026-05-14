@@ -1,108 +1,14 @@
-let projects = [
-    { /** LIBERDADE CRAVADA */ //feito
-        logo: "./images/LC_logo.png",
-        logo_alt: 'logo of the project "Liberdade Cravada"',
-        title: "Liberdade Cravada",
-        img: "./images/LC_screenshot.png",
-        alt: 'first section of the main page of the project "Liberdade Cravada"',
-        description: "Interactive web experience exploring the Portuguese Revolution through gamified interaction and data visualisation.",
-        tech: [
-            {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "D3.js", img:"https://imgs.search.brave.com/IwWmXgdExAsOEhkFvEcM0xl3Uu5qlZpvf4C3LJB7t5E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9kM2pzLnN2Zw", alt:"logo of d3.js"},
-            {name: "p5.js", img:"./images/p5.png", alt:"logo of p5.js"},
-            {name: "ml5.js", img:"https://imgs.search.brave.com/0v6XtuuwtG6u_U_DTZuCpDrs_860I4dzMsCw9NISdT8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hcmNo/aXZlLm1sNWpzLm9y/Zy9zdGF0aWMvMTU1/MmFiNzFlMTM0ZDNm/NmFhZWQwYzM5ZmJj/MGI4M2MvNGJhZDIv/bG9nby1wdXJwbGUt/Y2lyY2xlLnBuZw", alt: "logo of ml5.js"},
-            {name: "HTML5", img:"https://imgs.search.brave.com/-A7DMn2sD4NJtodxwkO-SQM6qd5-pMzItJulgw-SvIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9odG1sLTEuc3Zn", alt: "logo of HTML"},
-            {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-        ],
-        demo: "https://vivi4na02l.github.io/Liberdade-Cravada/",
-        github: "https://github.com/Vivi4na02l/Liberdade-Cravada"
-    },
-    { /** HEALTH DASHBOARD */ //feito
-        logo: "./images/health_logo.png",
-        logo_alt: 'logo of the project "Health dashboard"',
-        title: "Health Dashboard",
-        img: "./images/health_screenshot.png",
-        alt: 'screenshot of the main menu of Health Dashboard',
-        description: "A Vue.js dashboard application for managing groceries, recipes, nutrition intake and weekly activities, currently under active development.",
-        tech: [
-            {name: "Vue", img:"https://imgs.search.brave.com/lzEzLu8gYPE4210HEHtEAkn-20v0piUm6QAod9OycF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LXZ1ZS1sb2dvLWlj/b24tZG93bmxvYWQt/aW4tc3ZnLXBuZy1n/aWYtZmlsZS1mb3Jt/YXRzLS1jb21wYW55/LWJyYW5kLXdvcmxk/LWxvZ29zLXZvbC01/LXBhY2staWNvbnMt/MjgyNDk3LnBuZz9m/PXdlYnAmdz0yNTY", alt: "logo of vue"},
-            {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-        ],
-        demo: "https://vivi4na02l.github.io/health-dashboard/",
-        github: "https://github.com/Vivi4na02l/health-dashboard"
-    },
-    { /** REACT CALCULATOR */ //FAAAAZZZ
-        logo: "./images/calculator_logo.png",
-        logo_alt: 'logo of the project "Alvid-19"',
-        title: "React Calculator",
-        img: "./images/calculator_screenshot.png",
-        alt: 'screenshot of the react calculator project',
-        description: "Simple React calculator focused on clean component structure and predictable state management.",
-        tech: [
-            {name: "React", img:"https://imgs.search.brave.com/-wRYfmc8MFTE9dYoFBioZSxfu45QaJyuKfJ3h68gZGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtMy82/MDAvUmVhY3QuanNf/bG9nby01MTIucG5n", alt: "logo of React"},
-            {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-        ],
-        demo: "https://vivi4na02l.github.io/calculator_react/",
-        github: "https://github.com/Vivi4na02l/calculator_react"
-    },
-    { /** ALVID-19 */ //feito
-        logo: "./images/alvid_logo.png",
-        logo_alt: 'logo of the project "Alvid-19"',
-        title: "Alvid-19",
-        img: "./images/alvid-19_screenshot.png",
-        alt: 'first section of the main page of the project "Alvid-19"',
-        description: "Award-winning gamified educational web platform featuring user authentication, roles and interactive games.",
-        tech: [
-            {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "HTML5", img:"https://imgs.search.brave.com/-A7DMn2sD4NJtodxwkO-SQM6qd5-pMzItJulgw-SvIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9odG1sLTEuc3Zn", alt: "logo of HTML"},
-            {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-            {name: "MVC", img:false, alt:false},
-        ],
-        demo: "https://vivi4na02l.github.io/Alvid-19/Alvid-19/",
-        github: "https://github.com/Vivi4na02l/Alvid-19"
-    },
-    { /** VAPORWAVE BREAKOUT */ //feito
-        logo: "./images/LC_logo.png",
-        logo_alt: 'logo of the project "Vaporwave Breakout"',
-        title: "Vaporwave Breakout",
-        img: "./images/VB_screenshot.png",
-        alt: 'screenshot of the main menu of Vaporwave Breakout',
-        description: "Reinterpretation of the classic Breakout game focused on experimenting with alternative interaction methods.",
-        tech: [
-            {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "p5.js", img:"./images/p5.png", alt:"logo of p5.js"},
-            {name: "ml5.js", img:"https://imgs.search.brave.com/0v6XtuuwtG6u_U_DTZuCpDrs_860I4dzMsCw9NISdT8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hcmNo/aXZlLm1sNWpzLm9y/Zy9zdGF0aWMvMTU1/MmFiNzFlMTM0ZDNm/NmFhZWQwYzM5ZmJj/MGI4M2MvNGJhZDIv/bG9nby1wdXJwbGUt/Y2lyY2xlLnBuZw", alt: "logo of ml5.js"},
-            {name: "Arduino", img:"https://imgs.search.brave.com/FW1BpdqbKcF55DbjQeH7VCg6AeaCNKGgs3tebxQ-cXI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWFyZHVpbm8taWNv/bi1zdmctZG93bmxv/YWQtcG5nLTIyNjA3/Mi5wbmc_Zj13ZWJw/Jnc9MTI4", alt: "logo of arduino"},
-            {name: "HTML5", img:"https://imgs.search.brave.com/-A7DMn2sD4NJtodxwkO-SQM6qd5-pMzItJulgw-SvIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9odG1sLTEuc3Zn", alt: "logo of HTML"},
-            {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-        ],
-        demo: "https://vivi4na02l.github.io/Breakout-game/P5_to_Arduino/index.html",
-        github: "https://github.com/Vivi4na02l/Breakout-game"
-    },
-    { /** ASTEROIDS */ //feito
-        logo: "./images/A_logo.png",
-        logo_alt: 'logo of the project "Asteroids"',
-        title: "Asteroids",
-        img: "./images/A_screenshot.png",
-        alt: 'screenshot of the part of the gameplay of Asteroids',
-        description: "A 2D browser-based reimagining of the classic Asteroids game with solid boundaries, physics-based collisions, and mouse-aimed shooting mechanics.",
-        tech: [
-            {name: "JavaScript", img:"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", alt: "logo of javascript"},
-            {name: "Three.js", img:"https://imgs.search.brave.com/POddfkSkDEQORcswQ1JfXWpvf3y9rkeOnwJ-8TOej7s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jYW5h/ZGExLmRpc2NvdXJz/ZS1jZG4uY29tL2Zs/ZXgwMzUvdXBsb2Fk/cy90aHJlZWpzL29y/aWdpbmFsLzJYL2Iv/YmUyZjc1ZjcyNzUx/YzExY2JlMTU5M2M2/OWE5OWE1MjkwMGJm/MTJjYi5zdmc", alt:"logo of three.js"},
-            {name: "HTML5", img:"https://imgs.search.brave.com/-A7DMn2sD4NJtodxwkO-SQM6qd5-pMzItJulgw-SvIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9odG1sLTEuc3Zn", alt: "logo of HTML"},
-            {name: "CSS3", img:"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", alt: "logo of CSS"},
-            {name: "Bootstrap", img:"https://imgs.search.brave.com/linDLuCrb1B71Jtl1QP-3vAdm7VNtPqEZWlf2RStp44/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9i/L2IyL0Jvb3RzdHJh/cF9sb2dvLnN2Zw", alt:"logo of Bootstrap"},
-        ],
-        demo: "https://vivi4na02l.github.io/Asteroids/",
-        github: "https://github.com/Vivi4na02l/Asteroids"
-    },
-]
-
+let projects = [];
 let projectsClosed = [];
-let projectsList = projects;
-cardList();
+let projectsList;
+
+async function loadProjects() {
+    const response = await fetch("../data/projects.json");
+    projects = await response.json();
+
+    projectsList = projects
+    console.log(projects);
+}
 
 function cardList() {
     let projectsHtml = ''
@@ -232,3 +138,10 @@ function projectDetails(title) {
 
     window.location.href = "./html/projectDetails.html"
 }
+
+async function initialize() {
+    await loadProjects();
+    cardList();
+}
+
+initialize();
