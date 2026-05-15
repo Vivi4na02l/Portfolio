@@ -296,4 +296,51 @@
     ],
     "challenges": "One of the main challenges was designing a clean data structure for managing ingredients, shopping lists and pantry quantities while keeping the UI reactive and synchronized with the global state. Additionally, building interactive UI elements, such as the dynamic navigation slider and ingredient management logic, required careful handling of reactive state and DOM updates.",
     "learned": "Through this project I strengthened my understanding of building scalable frontend applications using Vue. I improved my skills in structuring component-based architectures, managing global state with Pinia, handling reactive data and derived state. The project also helped me gain experience organizing larger frontend codebases and designing interactive UI behaviour driven by application state."
-}]
+},
+{
+    "title":"React Wordle",
+    "context":"React Wordle is a customizable browser-based word game inspired by the original Wordle experience. The project was developed to explore React state management, API integration and dynamic UI rendering while extending the original gameplay with additional customization options. Unlike the traditional version, players can choose between different categories and word lengths, creating a more varied and replayable experience.",
+    "img": {
+        "src": "../images/wordle_screenshot.png",
+        "alt": "screenshot of the React Wordle project",
+        "caption":"Gameplay interface with customizable categories and word lengths"
+    },
+    "problem": "Traditional Wordle implementations are usually limited to a fixed word length and a single dictionary source. The goal of this project was to create a more dynamic and customizable version where players could select different word categories and lengths while ensuring all guesses remained valid words. This required combining multiple external APIs and handling different validation edge cases depending on the selected category.",
+    "roles": {
+        "sentence":"This is a solo frontend project where I designed and implemented the full application architecture and gameplay logic.",
+        "roles": [
+            {
+                "category": "",
+                "steps": [
+                    "Dynamic word generation based on selected category and word length",
+                    "Integration of multiple external APIs",
+                    "Word validation logic using different validation sources",
+                    "Conditional validation flow for countries category",
+                    "Interactive gameplay feedback system",
+                    "Dynamic UI updates based on game state",
+                    "React state management for gameplay logic",
+                    "Customizable game settings",
+                    "Responsive interface design",
+                    "Error handling for invalid words and API responses"
+                ]
+            }
+        ]
+    },
+    "tech": [
+        {
+            "tech":"React",
+            "desc":"Component-based UI architecture and state management"
+        },
+        {
+            "tech":"JavaScript",
+            "desc":"Gameplay logic, validation flow and dynamic rendering"
+        },
+        {
+            "tech":"REST APIs",
+            "desc":"External data retrieval and word validation"
+        }
+    ],
+    "challenges": "One of the main challenges was handling validation across multiple APIs with different limitations. Since the dictionary API did not validate country names, an additional API was required specifically for country verification. Managing asynchronous requests while keeping gameplay responsive and ensuring the interface updated correctly according to user input also required careful state handling.",
+    "learned": "Through this project I strengthened my understanding of React state management, conditional rendering and API integration. I also improved my ability to structure asynchronous validation flows, handle external data dependencies and create dynamic interfaces driven entirely by application state and user interaction."
+}
+]
