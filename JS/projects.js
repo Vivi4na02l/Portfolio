@@ -1,6 +1,7 @@
 let projects = [];
 let projectsClosed = [];
 let projectsList;
+let pageOnDisplay = 1, firstProject, lastProject;
 
 async function loadProjects() {
     const response = await fetch("../data/projects.json");
@@ -11,88 +12,117 @@ async function loadProjects() {
 }
 
 function cardList() {
+    let projectTotalPages = Math.ceil(projects.length/6); // counts how many pages are needed depending on the total of projects (only 6 project cards per page)
+    firstProject = (pageOnDisplay - 1) * 6;
+    lastProject = firstProject + 6;
+
+    let projectsPerPage = projectsList.filter((project, i) => {
+        return i >= firstProject && i < lastProject
+    })
+
     let projectsHtml = ''
 
-    for (const project of projectsList) {
-        projectsHtml += `
-            <div class="animHigher projectCard">
-                <article class="project">
-                    <!-- header -->
-                    <header>
-                        <div>
-                            <img src="${project.logo}"
-                                alt='${project.logo_alt}'>
-                            <h3>${project.title}</h3>
-                        </div>
-                        
-                        <div>
-                            <button class="headerBtn minimizeBtn" onclick="closeCard('${project.title}')">&#8211;</button>
-                            <button class="headerBtn fullscreenBtn" onclick="projectDetails('${project.title}')">&#9723;</button>
-                            <button class="closeBtn" onclick="closeCard('${project.title}')">✕</button>
-                        </div>
-                    </header>
-
-                    <!-- body -->
-                    <div class="body">
-                        <img src="${project.img}"
-                            alt='${project.alt}'
-                            class="projectImg">
-
-                        <p class="description">${project.description}</p>
-
-                        <span class="projectTech">`
-
-        for (const projectTech of project.tech) {
-            if (!projectTech.img) {
+    for (const project of projectsPerPage) {
+        // if (i >= firstProject && i < lastProject) {
             projectsHtml += `
-                    <figure>
-                        <figcaption>${projectTech.name}</figcaption>
-                    </figure>
-                ` 
-            } else {
+                <div class="animHigher projectCard">
+                    <article class="project">
+                        <!-- header -->
+                        <header>
+                            <div>
+                                <img src="${project.logo}"
+                                    alt='${project.logo_alt}'>
+                                <h3>${project.title}</h3>
+                            </div>
+                            
+                            <div>
+                                <button class="headerBtn minimizeBtn" onclick="closeCard('${project.title}')">&#8211;</button>
+                                <button class="headerBtn fullscreenBtn" onclick="projectDetails('${project.title}')">&#9723;</button>
+                                <button class="closeBtn" onclick="closeCard('${project.title}')">✕</button>
+                            </div>
+                        </header>
+
+                        <!-- body -->
+                        <div class="body">
+                            <img src="${project.img}"
+                                alt='${project.alt}'
+                                class="projectImg">
+
+                            <p class="description">${project.description}</p>
+
+                            <span class="projectTech">`
+
+            for (const projectTech of project.tech) {
+                if (!projectTech.img) {
                 projectsHtml += `
-                    <figure>
-                        <img src="${projectTech.img}"
-                            alt="${projectTech.alt} ">
-                        <figcaption>${projectTech.name}</figcaption>
-                    </figure>
-                `
+                        <figure>
+                            <figcaption>${projectTech.name}</figcaption>
+                        </figure>
+                    ` 
+                } else {
+                    projectsHtml += `
+                        <figure>
+                            <img src="${projectTech.img}"
+                                alt="${projectTech.alt} ">
+                            <figcaption>${projectTech.name}</figcaption>
+                        </figure>
+                    `
+                }
             }
-        }
-        
-        projectsHtml += `
-                        </span>
-                    </div>
-
-                    <!-- footer -->
-                    <footer>
-                        <a target="_blank" href="${project.demo}" class="lDemo">Live demo</a>
-                        <a target="_blank" class="cStudy" onclick="projectDetails('${project.title}')">Case study</a>
-                        <a target="_blank" href="${project.github}" class="github">Github</a>
-                    </footer>
-                </article>
-            </div>
-        `
-    }
-
-    if (projectsClosed.length != 0) {
-        projectsHtml += `<div class="iconProjectsClosed">`
-
-        for (const project of projectsClosed) {
+            
             projectsHtml += `
-                <figure onclick="reAddCard('${project.title}')" class="iconProjectClosed">
-                    <span>
-                        <img src="${project.logo}" width="100%">
-                        <figcaption class="pWhite karla">${project.title}</figcaption>
-                    </span>
-                </figure>
+                            </span>
+                        </div>
+
+                        <!-- footer -->
+                        <footer>
+                            <a target="_blank" href="${project.demo}" class="lDemo">Live demo</a>
+                            <a target="_blank" class="cStudy" onclick="projectDetails('${project.title}')">Case study</a>
+                            <a target="_blank" href="${project.github}" class="github">Github</a>
+                        </footer>
+                    </article>
+                </div>
             `
         }
 
-        projectsHtml += `</div>`
+        if (projectsClosed.length != 0) {
+            projectsHtml += `<div class="iconProjectsClosed">`
+
+            for (const project of projectsClosed) {
+                projectsHtml += `
+                    <figure onclick="reAddCard('${project.title}')" class="iconProjectClosed">
+                        <span>
+                            <img src="${project.logo}" width="100%">
+                            <figcaption class="pWhite karla">${project.title}</figcaption>
+                        </span>
+                    </figure>
+                `
+            }
+
+            projectsHtml += `</div>`
+        // }
     }
 
     document.querySelector("#projects").innerHTML = projectsHtml;
+}
+
+for (const button of document.querySelectorAll(".btnPage")) {
+    button.addEventListener('click', (e) => {
+        document.querySelector("#projectsTitle").scrollIntoView({
+            behavior: "smooth"
+        })
+        
+        for (const btn of document.querySelectorAll(".btnPage")) {
+            btn.classList.remove("active");
+            btn.classList.add("inactive");
+        }
+
+        e.target.classList.remove("inactive");
+        e.target.classList.add("active");
+
+        pageOnDisplay = parseInt(e.target.innerHTML);
+        cardList();
+    })
 }
 
 /**

@@ -312,10 +312,10 @@
             {
                 "category": "",
                 "steps": [
-                    "Dynamic word generation based on selected category and word length",
-                    "Integration of multiple external APIs",
-                    "Word validation logic using different validation sources",
-                    "Conditional validation flow for countries category",
+                    "Dynamic word generation using the <a href='https://random-words-api.kushcreates.com/'>Random Words API</a>",
+                    "Word validation using the <a href='https://dictionaryapi.dev/'>Dictionary API</a>",
+                    "Country name validation using the <a href='https://restcountries.com/'>REST Countries API</a>",
+                    "Conditional validation flow depending on selected category",
                     "Interactive gameplay feedback system",
                     "Dynamic UI updates based on game state",
                     "React state management for gameplay logic",

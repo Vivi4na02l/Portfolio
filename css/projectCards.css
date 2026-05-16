@@ -164,6 +164,29 @@
     transform: scale(1.15);
 }
 
+.pageControls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pageControls button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.pageControls .active {
+    background-color: #83d2ff;
+}
+
+.pageControls .inactive:hover {
+    cursor: pointer;
+    
+    background-color: #56c0fd;
+}
+
 /** mobile */
 @media screen and (max-width: 379px) {
     .projectTech figure {
