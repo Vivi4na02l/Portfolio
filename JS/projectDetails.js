@@ -23,7 +23,7 @@ let techs = [
 let projectsDetails = [];
 
 async function loadProjectDetails() {
-    const response = await fetch("/data/projectDetails.json");
+    const response = await fetch("./data/projectDetails.json");
     projectsDetails = await response.json();
     console.log(projectsDetails);
 }
