@@ -4,7 +4,7 @@ let projectsList;
 let pageOnDisplay = 1, firstProject, lastProject;
 
 async function loadProjects() {
-    const response = await fetch("../data/projects.json");
+    const response = await fetch("/data/projects.json");
     projects = await response.json();
 
     projectsList = projects
