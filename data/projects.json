@@ -26,7 +26,7 @@
     "tech": [
         {"name": "React", "img":"https://imgs.search.brave.com/-wRYfmc8MFTE9dYoFBioZSxfu45QaJyuKfJ3h68gZGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtMy82/MDAvUmVhY3QuanNf/bG9nby01MTIucG5n", "alt": "logo of React"},
         {"name": "JavaScript", "img":"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", "alt": "logo of javascript"},
-        {"name": "REST APIs", "img":"../images/brackets.png", "alt": "icon to represent rest apis"},
+        {"name": "REST APIs", "img":"./images/brackets.png", "alt": "icon to represent rest apis"},
         {"name": "CSS3", "img":"https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc", "alt": "logo of CSS"}
     ],
     "demo": "https://vivi4na02l.github.io/Wordle-React/",
