@@ -30,4 +30,4 @@ Instead of a traditional scrolling website, this portfolio behaves like a worksp
 - Git & GitHub
 
 ## How to Open
-URL: [will add soon]
+URL: vivi4na02l.github.io/Portfolio/
