@@ -53,7 +53,7 @@
     "title": "Architecture Landing Page",
     "img": "./images/architecture_screenshot.png",
     "alt": "screenshot of the main menu of Architecture Landing Page",
-    "description": "A Vue.js recreation of a Behance landing page design by Anna Yurieva and Pavel Lozovyi.",
+    "description": "A Vue.js recreation of a Behance landing page designed by Anna Yurieva and Pavel Lozovyi.",
     "tech": [
         {"name": "Vue", "img":"https://imgs.search.brave.com/lzEzLu8gYPE4210HEHtEAkn-20v0piUm6QAod9OycF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LXZ1ZS1sb2dvLWlj/b24tZG93bmxvYWQt/aW4tc3ZnLXBuZy1n/aWYtZmlsZS1mb3Jt/YXRzLS1jb21wYW55/LWJyYW5kLXdvcmxk/LWxvZ29zLXZvbC01/LXBhY2staWNvbnMt/MjgyNDk3LnBuZz9m/PXdlYnAmdz0yNTY", "alt": "logo of vue"},
         {"name": "JavaScript", "img":"https://imgs.search.brave.com/s95Fx2_gXkyBRwh25xOsVWeoBWrlHfiF5ANp-8xgIoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvamF2YXNj/cmlwdC1qcy1sb2dv/LXBuZ19zZWVrbG9n/by0yNzM1NTcucG5n", "alt": "logo of javascript"},

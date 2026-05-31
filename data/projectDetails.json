@@ -349,7 +349,7 @@
     "img": {
         "src": "../images/architecture_screenshot.png",
         "alt": "screenshot of the landing page",
-        "caption":"Landing page showcasing the responsive interface and animations"
+        "caption":"Landing page showcasing the responsive interface"
     },
     "problem": "Modern landing pages often rely on complex layouts, smooth animations and highly responsive designs to create engaging user experiences. The objective of this project was to transform a static design concept into a fully responsive and interactive website while maintaining visual consistency across different screen sizes and devices.",
     "roles": {
