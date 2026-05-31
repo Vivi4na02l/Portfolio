@@ -143,7 +143,7 @@ function render() {
                                     <img src="https://imgs.search.brave.com/RgVw7TR4U4riBvB4_Aie0ngUM5orFW9NSnu-0lrFJkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jc3MtMy5zdmc" alt="logo of CSS">
                                     HTML5 and CSS3
                                 </td>
-                                <td>Structure and styling</td>
+                                <td>Semantic structure, responsive layouts, visual styling, and UI animations</td>
                             </tr>          
                         </tbody>
                     </table>

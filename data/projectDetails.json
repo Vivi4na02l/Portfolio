@@ -28,10 +28,10 @@
                 ]
             },
             {
-                "category": "Data Visualisation:",
+                "category": "Data Visualization:",
                 "steps": [
                     "Interactive bar charts for election results",
-                    "Circular visualisations for party vote distribution",
+                    "Circular visualizations for party vote distribution",
                     "User-controlled filters to compare selected parties dynamically"
                 ]
             }
@@ -44,7 +44,7 @@
         },
         {
             "tech":"D3.js",
-            "desc":"Interactive data visualisation"
+            "desc":"Interactive data visualization"
         },
         {
             "tech":"p5.js",
@@ -97,7 +97,7 @@
         },
         {
             "tech":"MVC",
-            "desc":"Architeture implemented with vanilla JavaScript"
+            "desc":"Architecture implemented with vanilla JavaScript"
         }
     ],
     "challenges": "One of the main challenges was managing multiple interconnected systems within a single interface, including authentication, role-based permissions, and interactive games. Ensuring that different user roles triggered the correct functionality required careful control of conditional logic throughout the application.",
@@ -342,5 +342,47 @@
     ],
     "challenges": "One of the main challenges was handling validation across multiple APIs with different limitations. Since the dictionary API did not validate country names, an additional API was required specifically for country verification. Managing asynchronous requests while keeping gameplay responsive and ensuring the interface updated correctly according to user input also required careful state handling.",
     "learned": "Through this project I strengthened my understanding of React state management, conditional rendering and API integration. I also improved my ability to structure asynchronous validation flows, handle external data dependencies and create dynamic interfaces driven entirely by application state and user interaction."
+},
+{
+    "title":"Architecture Landing Page",
+    "context":"Architecture Landing Page is a frontend-focused project built with Vue.js to practice modern interface development, responsive design and advanced UI animations. The website recreates and adapts a visual concept originally designed by Anna Yurieva and Pavel Lozovyi, translating a static design into a fully interactive web experience. The project was developed to strengthen frontend development skills while exploring animation workflows, component architecture and responsive implementation. The original design credit belongs to <a target='_blank' href='https://www.behance.net/gallery/246093727/AXIS-HAUS-Visual-Identity-Website?tracking_source=search_projects%7Cwebsite+design&l=18'>Anna Yurieva and Pavel Lozovyi</a> and was used solely as inspiration for educational and portfolio purposes.",
+    "img": {
+        "src": "../images/architecture_screenshot.png",
+        "alt": "screenshot of the landing page",
+        "caption":"Landing page showcasing the responsive interface and animations"
+    },
+    "problem": "Modern landing pages often rely on complex layouts, smooth animations and highly responsive designs to create engaging user experiences. The objective of this project was to transform a static design concept into a fully responsive and interactive website while maintaining visual consistency across different screen sizes and devices.",
+    "roles": {
+        "sentence":"This is a solo frontend project where I implemented the entire website based on an existing design concept.",
+        "roles": [
+            {
+                "category": "",
+                "steps": [
+                    "Responsive layout implementation",
+                    "Component-based architecture",
+                    "Scroll-triggered animations",
+                    "Interactive UI transitions",
+                    "Mobile-first adaptations",
+                    "Dynamic content rendering",
+                    "Performance optimization for animations",
+                    "Cross-device testing",
+                    "Asset organization and management",
+                    "Frontend deployment"
+                ]
+            }
+        ]
+    },
+    "tech": [
+        {
+            "tech":"Vue",
+            "desc":"Component-based architecture and reactive rendering"
+        },
+        {
+            "tech":"JavaScript",
+            "desc":"Animation logic and interactive behavior"
+        }
+    ],
+    "challenges": "One of the main challenges was implementing scroll-based animations while maintaining smooth performance across different devices and screen sizes. Coordinating animation timing, viewport detection and responsive behaviour required careful planning to ensure a consistent user experience. Another challenge was translating a visually complex design into reusable Vue components while preserving the original aesthetic and interaction patterns.",
+    "learned": "This project strengthened my frontend development skills by giving me practical experience building a fully responsive landing page from a professional design concept. I improved my understanding of component composition, responsive design techniques, animation workflows and UI implementation in Vue. The project also helped me gain confidence transforming static designs into interactive web experiences while maintaining code organization and scalability."
 }
 ]
