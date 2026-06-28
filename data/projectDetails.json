@@ -256,30 +256,71 @@
     "learned": "This project strengthened my understanding of React's component model and state management. It also improved my ability to design modular logic systems where user interaction drives application behavior."
 },
 {
-    "title":"Health Dashboard",
-    "context":"Health Dashboard is a personal web application built with Vue.js that helps users manage groceries, pantry ingredients, recipes and nutritional intake in a single interface. The project focuses on building a structured and interactive dashboard experience while applying modern frontend architecture principles. The application is currently under active development, with additional features and improvements being continuously implemented.",
+    "title":"NutriDash",
+    "context":"NutriDash is a personal web application built with Vue.js and TypeScript that helps users manage nutritional intake, groceries, pantry ingredients, recipes and weekly activities in a single interface. The project focuses on building a structured and interactive dashboard experience while applying modern frontend architecture principles. The application is currently under active development, with additional features and improvements being continuously implemented.",
     "img": {
         "src": "../images/health_screenshot.png",
         "alt": "screenshot of the dashboard of project",
         "caption":"Screenshot showcasing the dashboard"
     },
-    "problem": "Managing groceries, ingredients and nutritional intake often involves using multiple different tools or applications. This can make it difficult to keep track of what ingredients are available at home, what needs to be purchased, and how meals contribute to daily nutrition goals. The goal of this project was to design a centralized dashboard interface where users can manage ingredients, create recipes, estimate nutritional intake and organize their grocery shopping in a more structured way.",
+    "problem":"People who want to manage their nutrition, groceries, and meal planning often rely on multiple disconnected tools: one app for calorie tracking, another for grocery lists, and another for recipes or meal planning. This fragmentation leads to duplicated data, inconsistent tracking, and a lack of overall visibility of what they actually consume and have available at home. NutriDash addresses this by centralizing all of these workflows into a single system where ingredients, meals, and nutrition tracking are interconnected.",
     "roles": {
-        "sentence":"This is a solo frontend project, where I designed the architecture and implemented the entire application.",
-        "roles": [
+    "sentence":"I designed and developed the entire application, focusing on data-driven architecture, reusable entities, and interconnected frontend systems. I built:",
+    "roles": [
             {
-                "category": "",
+                "category": "Nutrition System",
                 "steps": [
-                    "Grocery shopping list management",
-                    "Pantry ingredient tracking",
-                    "Ingredient quantity management",
-                    "Manual ingredient creation with nutritional values",
-                    "Recipe creation and management",
-                    "Weekly activity tracking",
-                    "Dynamic dashboard navigation",
-                    "Interactive UI elements and animations",
-                    "State management using a centralized store",
-                    "Persistent user data using local storage"
+                    "Daily tracking of protein, calories, and water intake",
+                    "Dynamic goal configuration (cutting and bulking modes) [under development]",
+                    "Automatic nutritional calculations based on ingredient data",
+                    "Historical tracking and progression statistics [under development]"
+                ]
+            },
+            {
+                "category": "Inventory System (Pantry)",
+                "steps": [
+                    "Ingredient-based inventory management system",
+                    "Stock quantity tracking with unit and weight support",
+                    "Filtering, sorting, and search functionality",
+                    "No stock detection and status indicators",
+                    "Integration with grocery list workflow"
+                ]
+            },
+            {
+                "category": "Shopping System (Grocery List)",
+                "steps": [
+                    "Persistent shopping list with quantity management",
+                    "Checkbox-based purchase state tracking",
+                    "Pantry-to-grocery synchronization",
+                    "Optional purchase cost tracking for analytics [under development]",
+                    "Modal-based bulk import from pantry"
+                ]
+            },
+            {
+                "category": "Recipe System [under development]",
+                "steps": [
+                    "Recipe creation with structured ingredient lists",
+                    "Step-by-step cooking instructions",
+                    "Automatic nutrition calculation per recipe",
+                    "Optional image support for recipes",
+                    "Pantry stock deduction when marking recipes as completed"
+                ]
+            },
+            {
+                "category": "Planning System [under development]",
+                "steps": [
+                    "Meal planner with day-based scheduling",
+                    "Activity tracking with streak logic",
+                    "Calendar-style organization of meals and tasks"
+                ]
+            },
+            {
+                "category": "Dashboard & UI System",
+                "steps": [
+                    "Modular dashboard with configurable widgets [under development]",
+                    "Real-time overview of nutrition, pantry, and shopping data",
+                    "Responsive layout structure",
+                    "Cross-module data visualization"
                 ]
             }
         ]
@@ -290,12 +331,20 @@
             "desc":"Reactive UI architecture with reactive state"
         },
         {
+            "tech":"Pinia",
+            "desc":"Global state management for shared application data and reactive entities"
+        },
+        {
             "tech":"JavaScript",
-            "desc":"Dynamic UI logic and data manipulation"
+            "desc":"Application logic in legacy components"
+        },
+        {
+            "tech":"TypeScript",
+            "desc":"Type-safe development for modernized components and new features"
         }
     ],
-    "challenges": "One of the main challenges was designing a clean data structure for managing ingredients, shopping lists and pantry quantities while keeping the UI reactive and synchronized with the global state. Additionally, building interactive UI elements, such as the dynamic navigation slider and ingredient management logic, required careful handling of reactive state and DOM updates.",
-    "learned": "Through this project I strengthened my understanding of building scalable frontend applications using Vue. I improved my skills in structuring component-based architectures, managing global state with Pinia, handling reactive data and derived state. The project also helped me gain experience organizing larger frontend codebases and designing interactive UI behaviour driven by application state."
+    "challenges":"Managing a highly interconnected data model required careful state orchestration using Pinia to maintain consistency across shared entities such as ingredients, pantry items, grocery lists, and recipes. Ensuring reactive updates across multiple components while avoiding state duplication and inconsistencies added complexity to the application architecture.",
+    "learned":"I became confident using TypeScript within a Vue 3 Composition API codebase, leveraging <script setup lang='ts'> to build more type-safe and maintainable components. This transition improved my ability to model complex reactive state, enforce consistency across shared data structures, and reduce runtime errors in a highly interconnected frontend architecture."
 },
 {
     "title":"React Wordle",
